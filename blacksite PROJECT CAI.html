@@ -1,0 +1,526 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center for Academic Innovation</title>
+    <link rel="stylesheet" href="black-site style.css">
+    <link rel="stylesheet" href="black-site placeholder style.css">
+
+    <script>
+        const cssVariables = [
+            '--xxl-space',
+            '--xl-space',
+            '--l-space',
+            '--m-space',
+            '--s-space',
+            '--xs-space',
+            '--xxs-space',
+            '--xxxs-space'
+        ];
+
+        // Create a temporary div to force computation of calc() values
+        const tempDiv = document.createElement('div');
+        // document.body.appendChild(tempDiv); // Add it to the DOM
+        tempDiv.style.visibility = 'hidden'; // Hide the div
+        tempDiv.style.position = 'absolute'; // Prevent it from affecting layout
+
+        cssVariables.forEach(variable => {
+            // Get the raw CSS variable value (e.g., "calc(2 * 1rem)")
+            const value = window.getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
+
+            // Apply the raw value to the temporary div's width.
+            // This forces the browser to compute the calc() expression.
+            tempDiv.style.width = value;
+
+            // Get the computed width, which will now be the resolved pixel value
+            const computedValue = window.getComputedStyle(tempDiv).width;
+
+            // Log the variable name and its computed pixel value
+            console.log(`${variable}: ${computedValue}`);
+        });
+
+        // Clean up: remove the temporary div from the DOM
+        document.body.removeChild(tempDiv);
+    </script>
+</head>
+
+
+<bodycopy>
+    <div>
+        <div id="project-disp-img" class="imgdiv">{image 10 no-zoom}</div>
+        <h1 id="page-title"> Center for Academic Innovation </h1>
+        <ul class="des_tags">
+            <li>Contextual Inquiry Consulting</li>
+            <li>Stakeholder Experience Research and Design</li>
+            <li>Workflow &amp; System Analysis and Design</li>
+        </ul>
+
+        <div>
+            <h2 class="">Client</h2>
+            <ul class="">
+                <li>Center for Academic Innovation</li>
+                <li>August - December 2021</li>
+                <li>University of Michigan</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="">My Roles</h2>
+            <ul class="">
+                <li>Stakeholder Experience Researcher and Designer</li>
+                <li>Client Leadership Relations and Outreach</li>
+                <li>Research Methodology Designer</li>
+                <li>Editor – deliverables</li>
+                <li>Graphic Designer</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="">Client Context and Problem Statement</h2>
+            <div>
+                <p>
+                    The Learning Experience Design Graduate(LxD) Certificate Program, offered through Center of Academic
+                    Innovation (CAI) provides students with the theoretical understanding and real-world experience
+                    required
+                    to design holistic student-centered learning experiences across modalities of instruction.
+                </p>
+                <p>
+                    Due to the recent and rapid expansion of the program, the program administrators engaged
+                    <i>underscore</i>studio (a team of MSI students at the University of Michigan’s School of
+                    Information)
+                    to
+                    identify new processes to:
+                </p>
+                <ul id="" class="">
+                    <li>
+                        <hr>
+                        <p><strong>Effectively and efficiently coordinate students with projects that best suit their
+                                individual
+                                learning goals, needs and interests</strong></p>
+                    </li>
+                    <li>
+                        <hr>
+                        <p><strong>Consistently insipire higher levels student engagement and satisfaction</strong></p>
+                        <hr>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="">Key Insights</h2>
+            <ol class="" start="1">
+                <li>
+                    <p>The coordinator is at the center of the workflow and has many responsibilities leading to the
+                        break
+                        down
+                        of communication and the redundancy of several processes.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Students’ ability to navigate ambiguity in tasks or deal with power dynamics in a workplace
+                        varies
+                        based
+                        on different levels of students’ professional experiences and backgrounds.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Manual and redundant processes are causing bottlenecks in the program’s workflow. They are also
+                        not
+                        scalable.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The alignment of the residency program’s learning goals and student expectations is not clearly
+                        articulated leading to a mismatch with student expectations. It should be clearly articulated
+                        that
+                        the
+                        tasks in the residency program are meant to paint a realistic picture of being a learning
+                        experience
+                        designer.
+                    </p>
+                </li>
+            </ol>
+        </div>
+
+        <div>
+            <h2 id="">Final Recommendations</h2>
+            <ol class="recs_and_fs">
+                <li>
+                    <h4>Implement mentorship system</h4>
+                    <p>The implementation of a mentorship program aims at improving and encouraging student engagement
+                        by
+                        providing students with much needed support, by circumventing communication inefficiencies, and
+                        by
+                        simplifying the coordination process.</p>
+
+                    <p>
+                        By working with mentors, students have a place to go to elicit help for difficulties they are
+                        experiencing at an individual level—areas might not be well covered-by or suited- for seminar.
+                        This
+                        includes the refinement of their personal processes and methodology towards designing learning
+                        experiences and the deliverables that this entails, however, this can also include working on
+                        developing
+                        the “intangibles”: the soft-skills required to be a successful learning experience designer and
+                        the
+                        navigation of the ambiguity and openness inherent to this field of work.
+                    </p>
+                    <hr>
+                    <div class="callout">
+                        <p>
+                            <small><b>Context:</b> this was a recommendation I arrived at during the individual
+                                processing
+                                time within a
+                                larger group brainstorming session, so, for this recommendation only, I am able to and
+                                will
+                                talk about my
+                                personal thought processes.</small>
+                        </p>
+
+                        <p>
+                            When I looked at the key findings, I was trying to find a way to piece everything together,
+                            and
+                            <strong>I realized that the four findings could further be distilled into:</strong>
+                        </p>
+                        <ol>
+                            <li class="lvl2">
+                                <p>Both the overburdening of the coordinator and the redundancies of the system were due
+                                    to
+                                    the
+                                    centrality of the coordinator within most processes</p>
+                            </li>
+                            <li class="lvl2">
+                                <p>
+                                    Student dissatisfation and lack engagment was mainly due to uncertainty: students
+                                    were
+                                    not
+                                    properly
+                                    made aware of the value in the more menial projects, and, with the larger higher
+                                    impact
+                                    projects,
+                                    students experienced difficulties navigating the ambiguity inherent to the designing
+                                    of
+                                    learning
+                                    experiences</p>
+                            </li>
+                        </ol>
+                        <p>
+                            This lead me to look for a holistic solution that would better support students
+                            <strong></strong><em>while/by</em>
+                            unburdening the coordinator and steamlining the communicaiton &amp; coordination processes.
+                            <br><br>
+                            <a href="#Ideation"><small>See my notepad and thought process in the brainstorming
+                                    section.</small></a>
+                        </p>
+                    </div>
+                    <hr>
+                </li>
+                <li>
+                    <h4>Delegation, automation, and simplification.</h4>
+                    <p>
+                        The current program-coordination process and student-project management process, is almost
+                        entirely
+                        done
+                        by hand. Due to the programs rapid expansion and continued projected expansion, this model is no
+                        longer
+                        sustainable, and it is therefore essential to redistribute responsibilities and automate or
+                        simplify
+                        (cull) redundant processes and tasks.
+                    </p>
+                </li>
+                <li>
+                    <h4>Improve Student and Learning Experience Designer (LxD) Experience</h4>
+                    <p>
+                        The management of the program is focused on the growth, development, and maturation of the
+                        program.
+                        This, however, was seen as synonymous with providing a well designed learning and teaching
+                        experience
+                        for students and LxDs respectively, leading to misdirected efforts. To better engage students in
+                        their
+                        learning and support LxDs in their training of students, it is vital to realign the program’s
+                        focus
+                        onto
+                        the experience of the students and LxDs.
+                    </p>
+                </li>
+                <li>
+                    <h4>Using Google Calendar to visualize student-project mapping</h4>
+                    <p>
+                        In order to account for the interests and background of the students, the program conducts the
+                        pairing
+                        of students to LxDes projects by hand. There is, however, no set process or designated artefacts
+                        to
+                        help, which has resulted in a highly inefficient, inconsistent, and “chaotic” process.</p>
+
+                    <p>
+                        Since a large portion of the pairing process is in the balancing of schedules, the utilization
+                        and
+                        “hacking” of Google’s Calendar provides a short-term (not scalable) fix that streamlines and
+                        automates
+                        much of the process.
+                    </p>
+                </li>
+            </ol>
+        </div>
+
+        <div>
+            <h2>Client Feedback</h2>
+            <div class="blockquote_div">
+                <blockquote class="big">
+                    "The immediate benefits of your work will improve our working conditions at CAI, the longer term
+                    benefits of
+                    this project will surely be felt among cohorts."
+                    <br><br>
+                    "A particular highlight from your report was the recommendations section, when you weighed multiple
+                    solutions for one problem next to each other. This was most appreciated... you presented multiple
+                    solutions
+                    for us to consider, and gave us a fair assessment of their scalability and impact on student
+                    experience."
+                    <br><br>
+                    "In a pedagogical sense, we think this presentation tact helps us “get into the design mindset” and
+                    approach
+                    the written material as co-contributors to the solution engineering process. Thank you for your
+                    detail-oriented work in this regard."
+                    <br><br>
+                    "Overall we found the experience compelling, rewarding, and a benefit to our team and the residency
+                    student
+                    experience."
+                    <br><br><br>
+                    —CAI Leadership
+                </blockquote>
+            </div>
+            <p></p>
+        </div>
+
+
+        <div>
+            <h2 id="Research">Research</h2>
+            <div class="no_t_m_children">
+                <h3 id="ResearchGoals">Research Goals</h3>
+                <ul>
+                    <li>
+                        <p><b>Identify and understand the factors that negatively impact student engagement</b></p>
+                    </li>
+                    <li>
+                        <p><b>Understand the concurrent student-project assignment process and its effects on student
+                                engagement</b>
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Understand the student coordination process within projects and its effects on both
+                                student
+                                engagement as well as the student-project assignment process.</b></p>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <div>
+                    <h3 id="Methodology">Methodology and Process</h3>
+                    <p>
+                        <strong>
+                            After meeeting with the program's leadership to understand scope of issues and the
+                            concurrent
+                            program system and status, I co-lead and designed the research methodolgy and defined the
+                            overarching hunt statement and research goal as well as the the research goals for each of
+                            the
+                            primary stakeholder groups.
+                        </strong>
+                    </p>
+                    <p class="red_callout">
+                        This approach optimizes for both width and depth in research and allowed us to indentify the
+                        root
+                        causes
+                        of the issues regarding student engagement and student coordination.
+                    </p>
+                </div>
+                <ul id="r_process_li" class="bullet_less">
+                    <li>
+                        <h4>Leadership Meetings</h4>
+                        <p>We met with leadership to understand scope of issues and the concurrent program system and
+                            status.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Background Research</h4>
+                        <p>
+                            To better understand the problem space and inform our reach approach, each team member also
+                            conducted individual background research in the form on literature analysis. Our compiled
+                            research
+                            reports total over 8000 words.
+                        </p>
+                        <p>
+                            I researched Massive Online Open Courses (MOOCs) and the differences between designing
+                            online-courses and in-person courses, and my report can be read here:
+                            <a
+                                href="https://docs.google.com/document/d/1CTJbn2RaOCq5zgNFYHVO1BveegRnc6KrmXGBOlHLsKY/edit?usp=sharing">Designing
+                                the Bits and Bytes of Online Course Design</a>.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Contextual Inquiry and Semi-Structured Interviews</h4>
+                        <p>
+                            We conducted 7 semi-structured interviews, site-visits, and gathered &amp; analyzed
+                            artefacts.
+                            <strong>I lead 2 interviews and took notes for another 2</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Participants per stakeholder group:</h4>
+                        <ul style="list-style-type:disc;">
+                            <li>Learning Experience Designers x3</li>
+                            <li>Associate Director x1</li>
+                            <li>Program Coordinator x1</li>
+                            <li>Student x1</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div>
+            <h2>Synthesis</h2>
+            <p>We analyzed the qualitative data through affinity diagramming and workflow &amp; system modeling </p>
+            <div class="imgdiv">{image 11}</div>
+            <div class="imgdiv">{image 12}</div>
+        </div>
+
+        <div>
+            <h2 id="Ideation">Ideation &amp; Evaluation</h2>
+
+            <div>
+                <h3 id="brainstorming">Brainstorming</h3>
+                <div id="brainstorming_gal" class="flexed c_gap_3">
+                    <div class="imgdiv stroked">
+                        {image 13}
+                    </div>
+                    <div class="imgdiv stroked">
+                        {image 14}
+                    </div>
+                    <div class="imgdiv stroked">
+                        {image 15}
+                    </div>
+                    <div class="imgdiv stroked">
+                        {image 16}
+                    </div>
+                </div>
+                <small>I’m a bit of a verbal thinker, even when ideating 😅</small>
+                <p>
+                    Altogether, our team held three separate brainstorming sessions that were split between individual
+                    and
+                    group brainstorming, during which ideas would often be combined into proto-solutions.
+                </p>
+                <p class="red_callout">
+                    After we had generated 50 proto-solutions, we compiled them into a spreadsheet and rated and ranked
+                    each
+                    based on its ease-of-implementation, the importance of problem(s) it aimed address, and the
+                    likely extent to which it solves these problems.
+                </p>
+                <div class="imgdiv stroked">
+                    {image 18}
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <h2 id="Reflections">Reflections</h2>
+        <!-- <h3 class="reflections">Logistical</h3>
+<h4 class="reflections">Super short: </h4>
+<p>The project brief and initial client meet indicated that the focus streamlining the workflow, rather than student
+    engagement, and, if I had the chance, I would go back and interview more students. </p>
+<h4>Full</h4>
+<p>The project brief and initial client meeting was heavily focused on the coordination process rather than student
+    engagement. There was also only one student listed as available for interview. As a result, our team believed the
+    focus to be the workflow of the coordination process, and thus focused our research efforts on that. It was only
+    after the interview with one of the program’s associate directors did the centrality of student engagement become
+    clarified.</p>
+<p>Thankfully, the single interview with the student hadn’t occurred yet and the interviews with the learning experience
+    designers had revealed several of the tensions and pain points of both students and the learning experience
+    designers. The interview with the student thus allowed for an informal evaluation of frustrations identified thus
+    far, while also providing a different frame of reference for those points of frustration.</p>
+<p>
+    <b>That being said, if this project was extended, it would be absolutely necessary to conduct more interviews with
+    the students and with a focus on their experiences and the contributing factors.</b>
+</p> -->
+
+
+        <h3 class="reflections">Team Dynamics </h3>
+        <p> A brief would bring misunderstandings, so here’s what I learned instead: (And I will write more casually
+            here.)
+        </p>
+        <ol class="red_callout">
+            <li>I learned how to maintain team productivity and communication despite poor team dynamics.</li>
+            <li>I learned that, while it’s good that I have the ability to build strong interpersonal relations with any
+                individual
+                team member, I also need to learn how to utilize this to help teammates connect with each other.</li>
+        </ol>
+
+
+        <h3 class="reflections">Full</h3>
+        <p>I was the designated editor, graphic designer, and point person for client outreach, I was the one that
+            polished
+            and
+            finalized everything. This meant that everything had to go through me because I was the one who polished and
+            finalized everything before sending it out.</p>
+
+        <p>
+            During the beginning of the project, one member of the team (X) was largely self taught and, consequently,
+            initially,
+            held positions that were outside of professional practice (such as supporting the use of priming questions).
+            <br><br>
+            <b>To be absolutely clear and fair, X was and is a great person, they were just misapplying a few principles
+                sometimes. X also made the necessary adjustments very quickly.</b>
+        </p>
+
+        <p>
+            X, however, expressed to me on the side that they felt somewhat excluded and not-trusted, (and this was very
+            much not the case)
+            so I brought it up with the other teammates that we should try to include X a little more. But the efforts
+            seemed to
+            put X on gaurd more than anything, which eventually strained the overall team dynamics, and, gradually
+            shifted
+            the team
+            dynamic to something more like rotating teams of two.
+        </p>
+
+        <div class="red_callout">
+            <p>
+                In order to ensure deliverables made all the deadlines
+                and without loss of quality, I really had to utilize my role as the person that finalized everything to
+                connect and
+                work with each team member individually. I also had to really lean into my individual relationship and
+                rapport with each
+                member to keep the project on track and keep the communication consistent. Thankfully, everything held
+                through the very
+                end, and the team ultimately delivered a great final presentation and report to both the class and the
+                client.
+                <br><br>
+                Looking back, if I could repeat, I would definitely much more emphasis into building the team dynamic
+                rather
+                than
+                holding things together by working with teammates individually. This isn’t to say that this new approach
+                is
+                definitively better, especially when given the circumstances and my personal bandwidth, but I think that
+                it’s
+                important to learn how to help teammates connect with each other.
+            </p>
+        </div>
+
+
+
+        <br><br>
+        <hr>
+        <p> ciao~</p>
+    </div>
+
+</bodycopy>
