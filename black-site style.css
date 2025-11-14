@@ -124,6 +124,18 @@ a {
 }
 
 
+.semibold {
+	font-weight: 600;
+	letter-spacing: -0.0125em;
+}
+
+h1>small,
+h2>small,
+h3>small,
+h4>small {
+	font-size: 0.8em;
+}
+
 .div-spacer {}
 
 .section-spacer {}
@@ -154,12 +166,9 @@ blockquote {
 	left: -9999px;
 }
 
-/* body > div.main_container > div.content_container > div:nth-child(1) > div > div > div.page.container.container_width >  */
-bodycopy>div {
-	display: grid;
-	grid-template-columns: 1fr;
+body{
+	padding: 2.5vw;
 }
-
 
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -169,6 +178,10 @@ bodycopy>div {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: var(--s-space);
+}
+
+.portfolio-gallery-name {
+	font-size: var(--h2-size);
 }
 
 .project-card * {
@@ -186,6 +199,12 @@ bodycopy>div {
 
 .project-gallery-tags {
 	font-size: var(--small-paragraph-size);
+}
+.mobile-hide {
+	display: none;
+}
+.mobile-only {
+	display: block;
 }
 
 
@@ -205,21 +224,6 @@ bodycopy>div {
 
 
 @media screen and (min-width: 768px) {
-
-	/* body > div.main_container > div.content_container > div:nth-child(1) > div > div > div.page.container.container_width >  */
-	bodycopy>div {
-		grid-template-columns: 1fr 1fr;
-		column-gap: 5%;
-	}
-
-	/* body > div.main_container > div.content_container > div:nth-child(1) > div > div > div.page.container.container_width >  */
-	bodycopy>div>* {
-		grid-column: 1 / -1
-	}
-
-	.imgdiv {
-		grid-column: '';
-	}
 
 	.portfolio-gallery {
 		display: grid;
@@ -244,5 +248,8 @@ bodycopy>div {
 		font-size: var(--small-paragraph-size);
 	}
 
+	.mobile-only {
+		display: none;
+	}
 
 }

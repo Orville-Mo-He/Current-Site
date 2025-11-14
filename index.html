@@ -4,41 +4,76 @@
     <title>Orville Mo-He Portfolio</title>
     <link rel="stylesheet" href="black-site style.css">
     <link rel="stylesheet" href="black-site placeholder style.css">
-    <title>Orville Mo-He</title>
+    <title>Orville Mo-He | Portfolio</title>
     <script src="black-site script.js" defer></script>
+    <script defer>
+        // var home_button = document.getElementById('home');
+        // var to_clear = document.querySelector('active_nav');
+
+        // function mark_active() {
+        //     if (to_clear) {
+        //         to_clear.classList.remove("active_nav");
+        //     }
+        //     else(){
+        //         return;
+        //     }
+        // }
+
+        // function clear_it_all(){
+        //     mark_active();
+        //     console.log("hi");
+        // }
+
+        window.addEventListener("load", function () {
+            //console.log("Good job opening the window");
+
+            var to_clear = document.querySelector('active_nav');
+
+            if (to_clear) {
+                to_clear.classList.remove("active_nav");
+            }
+        });
+    </script>
 </head>
 
+<body>
 
-<bodycopy>
-    <nav>
-        <a href="">
-            <p>Orville Mo-He</p>
-        </a>
-        <ul class="nav_links">
-            <li><a href="blacksite%20Home.html" id="home" class="active_nav">Home</a></li>
-            <li><a href="about%20me.html" id="about">About Me</a></li>
-            <li><a href="contact%20me.html" id="contact">Contact Me</a></li>
-        </ul>
-    </nav>
+    <header>
 
-    <div>
+        <body>
+            <nav>
+                <a href="">
+                    <p>Orville Mo-He</p>
+                </a>
+                <ul class="nav_links">
+                    <li><a href="blacksite%20Home.html" id="home" class="active_nav">Home</a></li>
+                    <li><a href="about%20me.html" id="about">About Me</a></li>
+                    <li><a href="contact%20me.html" id="contact">Contact Me</a></li>
+                </ul>
+            </nav>
+        </body>
+    </header>
+
+    <main>
         <h1 class="page_title"><br>Orville Mo-He's Portfolio</h1>
-        <div class="imgdiv"><a href="" rel="history" class="imgdiv">{image
-                7}</a>
-        </div>
-        <div id="personal-intro">
-            <p class="big-paragraph">Hi! I'm Orville!&nbsp;&nbsp;</p>
-            <p class="big-paragraph">I am a multi-disciplinary designer and UX researcher, and I am passionate about
+
+        <div id="hero">
+            <div class="imgdiv"><a href="" rel="history" class="imgdiv">{image
+                    7}</a>
+            </div>
+            <p class="big-paragraph">Hi! I'm Orville!<br>
+                I am a multi-disciplinary designer and UX researcher, and I am passionate about
                 working with people to help them unearth the root causes of the challenges they may be facing and
                 designing...</p>
-        </div> 
 
+        </div>
 
         <div class="section-spacer"></div>
         <div class="portfolio">
             <hr>
-            <h2 class="portfolio-gallery-name">Selected Projects<br>
-            </h2>
+            <h2 class="portfolio-gallery-name"><small>Selected Projects</small></h2>
+            <!-- <h2 class="portfolio-gallery-name">Selected Projects</h2>   -->
+
 
             <div class="portfolio-gallery grid-1-1">
                 <div class="project-card">
@@ -128,44 +163,12 @@
             </div>
         </div>
 
-        <script>
-            // var home_button = document.getElementById('home');
-            // var to_clear = document.querySelector('active_nav');
 
-            // function mark_active() {
-            //     if (to_clear) {
-            //         to_clear.classList.remove("active_nav");
-            //     }
-            //     else(){
-            //         return;
-            //     }
-            // }
+    </main>
 
-            // function clear_it_all(){
-            //     mark_active();
-            //     console.log("hi");
-            // }
-
-            window.addEventListener("load", function () {
-                //console.log("Good job opening the window");
-
-                var to_clear = document.querySelector('active_nav');
-
-                if (to_clear) {
-                    to_clear.classList.remove("active_nav");
-                }
-            });
-        </script>
-
-
-
-
-
-
-
-    </div>
-</bodycopy>
-
-<br><br><br><br>
-<hr>
-<p>byes~ thank you!</p>
+    <footer id=footer>
+        <br><br><br><br>
+        <hr>
+        <p>Designed and coded by Orville Mo-He &#169;</p>
+    </footer>
+</body>
