@@ -7,7 +7,9 @@ body>div.main_container>div.pinned.pinned_top>div {
 
 }
 
-
+.container_width {
+	max-width: 1920px;
+}
 
 
 /* testing above*/
