@@ -1,14 +1,10 @@
 let canvas;
 let cluster1, cluster2, cluster3;
 let cnvContainer = document.getElementById('cvnContainer');
+var c_width = cnvContainer.offsetWidth;
+var c_height = cnvContainer.offsetHeight;
+var computedStyle = window.getComputedStyle(document.body);
 
-if (cnvContainer) {
-    var c_width = cnvContainer.offsetWidth;
-    var c_height = cnvContainer.offsetHeight;
-    var computedStyle = window.getComputedStyle(document.body);
-} else {
-    console.log('no cnvContainer found');
-}
 
 
 function setup() {
