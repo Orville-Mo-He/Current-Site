@@ -17,7 +17,7 @@ function setup() {
 
     stroke(350, 50);
     strokeWeight(1);
-    rect(0, 0, canvas.width, canvas.height);
+    // rect(0, 0, canvas.width, canvas.height);
     // line(canvas.width / 2, 0, canvas.width / 2, canvas.height);
 
     cluster1 = new Cluster(
@@ -254,8 +254,8 @@ function genLayersPerCluster(numClusters = 5, minLayers = 500, maxLayers = 1000)
 
 function draw() {
 
-    background(bgColor);
-
+    // background(bgColor);
+    clear();
     stroke(350, 50);
     cluster1.createAllLayers(-400, -1500);
 

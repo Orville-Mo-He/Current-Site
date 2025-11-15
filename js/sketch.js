@@ -1,9 +1,9 @@
 let canvas;
 let cluster1, cluster2, cluster3;
-let cnvContainer = document.getElementById('cvnContainer');
+let cnvContainer = document.getElementById('cnvContainer');
 var c_width = cnvContainer.offsetWidth;
 var c_height = cnvContainer.offsetHeight;
-var computedStyle = window.getComputedStyle(document.body);
+var computedStyle = getComputedStyle(document.documentElement);
 
 
 
@@ -16,7 +16,7 @@ function setup() {
     let lpcArray = genLayersPerCluster(3, minLayers, maxLayers);
 
     canvas = createCanvas(c_width, c_height);
-    canvas.parent('cvnContainer');
+    canvas.parent('cnvContainer');
 
     stroke(350, 50);
     strokeWeight(1);
@@ -39,6 +39,7 @@ function setup() {
         canvas.width * 12 / 12, canvas.height * 13 / 12
     );
 
+    // console.log('HI')
     cluster2 = new Cluster(
         lpcArray[1],
 
@@ -257,7 +258,7 @@ function genLayersPerCluster(numClusters = 5, minLayers = 500, maxLayers = 1000)
 
 function draw() {
 
-    background(bgColor);
+    clear();
 
     stroke(350, 50);
     cluster1.createAllLayers(-400, -1500);
