@@ -1,13 +1,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/black-site style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Orville Mo-He | Portfolio</title>
+
+    <!--come back and add the specific Icons used-->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://use.typekit.net/ebp8gbo.css">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/black-site style.css">
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
     <script src="js/script.js" defer></script>
     <script src="js/sketch.js" defer></script>
-
     <script defer>
         // var home_button = document.getElementById('home');
         // var to_clear = document.querySelector('active_nav');
@@ -40,7 +44,7 @@
 
 <body>
     <header>
-        <nav>
+        <nav id="nav">
             <a id="logo-link" href="index.html">
                 <svg id="logo" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.00001 24.00001">
                     <path class="cls-2"
@@ -62,19 +66,37 @@
                     <path class="cls-2"
                         d="M23.97978,14.34055v3.93683c0,.24992-.21346.4456-.46268.42639-.50635-.03902-1.01177-.09485-1.51075-.15754-2.98092-.37451-6.10664-1.1536-8.55817-2.27362-.61276-.27995-2.01838-1.02901-2.06952-1.51609-.07077-.67406,1.49277-.85219,2.29772-.87573,1.19635-.03499,2.48227.05805,3.68651.09206,1.61014.04547,3.27703.07123,4.89076.01356.42662-.01465.85306-.05639,1.27887-.07293.24367-.00946.44725.18325.44725.42706h.00001Z" />
                 </svg>
-                <p>Orville Mo-He's Portfolio</p>
+                <p>Orville Mo-He</p>
             </a>
-            <ul class="desktop-nav desktop-only">
+            <ul id="desktop-nav" class="desktop-only">
                 <li><a href="index.html" id="home" class="active_nav">Home</a></li>
                 <li><a href="about%20me.html" id="about">About Me</a></li>
                 <li><a href="contact%20me.html" id="contact">Contact Me</a></li>
             </ul>
-            <button type="button" class="mobile-tablet"><span class="material-icons">menu</span></button>
+
+            <button type="button" class="mobile-tablet icon-only-button" id="open-mobile-nav">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+
+            <div id="mobile-nav" class="mobile-tablet">
+                <div id="mobile-nav-main">
+                    <button type="button" class="icon-only-button" id="close-mobile-nav">
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </button>
+                    <ul id="mobile-nav-list">
+                        <li class="mobile-nav-links"><a href="index.html" id="home" class="active_nav">Home</a></li>
+                        <li class="mobile-nav-links"><a href="about%20me.html" id="about">About Me</a></li>
+                        <li class="mobile-nav-links"><a href="contact%20me.html" id="contact">Contact Me</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
+        <h1 class="page_title"><br>Orville Mo-He's Portfolio</h1>
     </header>
 
     <main>
-        <h1 class="page_title"><br>Orville Mo-He's Portfolio</h1>
 
         <div id="home-hero">
             <div id="home-hero-portrait" class="imgdiv"><img src="assets/home/placeholder.png" alt=""></div>
