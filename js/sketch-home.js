@@ -5,22 +5,15 @@ var c_width = cnvContainer.offsetWidth;
 var c_height = cnvContainer.offsetHeight;
 var computedStyle = getComputedStyle(document.documentElement);
 
-// If I stablize random numbers, I can use them create more varied compositions
-// stabilize in the sense that I could use that same number for all the
-// control points and the apex for example. and also stablize in the sense that
-// the "random" numbers would be generated noise from the same seed.
-// i would need 2 different y coordinates [2x(control point and vertex set)]
-// for each cluster. So for 3 clusters, I would need 6 different y coordinates.
-
-// i would multiply that by the magnitude I want to shift each point by.
 
 
 function setup() {
 
     bgColor = color(computedStyle.getPropertyValue('background-color'));
     console.log(`bgColor: ${bgColor}`);
-
-    let lpcArray = genLayersPerCluster(3, 100, 500);
+    let minLayers = 100;
+    let maxLayers = 500;
+    let lpcArray = genLayersPerCluster(3, minLayers, maxLayers);
 
     canvas = createCanvas(c_width, c_height);
     canvas.parent('cnvContainer');
@@ -95,14 +88,9 @@ class Cluster {
     constructor(numLayers, startP_x, startP_y,
         //  apexCP1_x, apexCP1_y, apexCP2_x, apexCP2_y, apexP_x, apexP_y,
         endCP1_x, endCP1_y, endCP2_x, endCP2_y, endP_x, endP_y) {
-
-        this.xNoiseVal = noise(numLayers)           // since numLayers is generated from noise,
-        this.numLayers = noise(this.xNoiseVal);     // we are just using it like a fractal
-        this.xNoiseVal
+        this.numLayers = numLayers;
         this.startP_x = startP_x;
         this.startP_y = startP_y;
-
-        // ensure no zeroes and that it doesn't basically vacate the canvas
 
         // // apex control points
         // this.apexCP1_x = apexCP1_x;
@@ -124,6 +112,12 @@ class Cluster {
         this.endP_x = endP_x;
         this.endP_y = endP_y;
 
+
+
+        // what needs to have the organic?
+        // the distances between layers
+        // the amount of layers per cluster
+        // the shape of each layer?
     }
 
     pointsTester(bool = true) {
@@ -267,13 +261,13 @@ function draw() {
     clear();
 
     stroke(350, 50);
-    cluster1.createAllLayers(-canvas.height/2, -canvas.height);
+    cluster1.createAllLayers(-canvas.height, -2 * canvas.height);
 
     // cluster2.pointsTester(true)
-    cluster2.createAllLayers(canvas.height/2, canvas.height/2);
+    cluster2.createAllLayers(canvas.height, canvas.height);
 
     // cluster3.pointsTester(true)
-    cluster3.createAllLayers(canvas.height/3, canvas.height/3);
+    cluster3.createAllLayers(canvas.height/1.5, canvas.height/1.5);
 
     // cluster1.pointsTester(true);
     // cluster2.pointsTester(true);
