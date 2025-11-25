@@ -1,9 +1,10 @@
 let canvas;
-let cluster1, cluster2, cluster3;
+let cluster1, cluster2, cluster3, lpcArray;
 let cnvContainer = document.getElementById('cnvContainer');
 var c_width = cnvContainer.offsetWidth;
 var c_height = cnvContainer.offsetHeight;
 var computedStyle = getComputedStyle(document.documentElement);
+console.log(`new width: ${c_width}, new height: ${c_height}`);
 
 
 
@@ -13,7 +14,7 @@ function setup() {
     console.log(`bgColor: ${bgColor}`);
     let minLayers = 100;
     let maxLayers = 500;
-    let lpcArray = genLayersPerCluster(3, minLayers, maxLayers);
+    lpcArray = genLayersPerCluster(3, minLayers, maxLayers);
 
     canvas = createCanvas(c_width, c_height);
     canvas.parent('cnvContainer');
@@ -220,6 +221,8 @@ class Cluster {
                 let noiseValAt_i = noise(0.1 * i);
                 // console.log(`noiseValAt_i: ${noiseValAt_i}`);
                 strokeWeight(1.5 - noiseValAt_i);
+                // stroke(350, map(noiseValAt_i, 0, 1, 0, 200));
+                stroke(350, map(noiseValAt_i, 0, 1, 0, 100));
 
                 this.createLayer(
                     this.startP_x, map(this.startP_y * noiseValAt_i, 0, this.startP_y, this.startP_y + startRange, this.startP_y),
@@ -256,6 +259,67 @@ function genLayersPerCluster(numClusters = 5, minLayers = 500, maxLayers = 1000)
 }
 
 
+
+
+function windowResized() {
+
+    c_width = cnvContainer.offsetWidth;
+    c_height = cnvContainer.offsetHeight;
+    resizeCanvas(c_width, c_height);
+
+    console.log(`new width: ${c_width}, new height: ${c_height}`);
+
+    cluster1 = new Cluster(
+        lpcArray[0],
+
+        // start point
+        canvas.width * 0 / 12, canvas.height * 3 / 12,
+
+        // end control point 1
+        canvas.width * 7 / 12, canvas.height * 1 / 12,
+
+        // end control point 2
+        canvas.width * 9 / 12, canvas.height * 12 / 12,
+
+        // end point
+        canvas.width * 12 / 12, canvas.height * 13 / 12
+    );
+
+    // console.log('HI')
+    cluster2 = new Cluster(
+        lpcArray[1],
+
+        // start point
+        canvas.width * 0 / 12, canvas.height * 4 / 12,
+
+        // end control point 1
+        canvas.width * 8 / 12, canvas.height * 3 / 12,
+
+        // end control point 2
+        canvas.width * 9 / 12, canvas.height * 9 / 12,
+
+        // end point
+        canvas.width * 12 / 12, canvas.height * 10 / 12
+    );
+
+    // cluster3 = new Cluster(
+    //     lpcArray[2],
+
+    //     // start point
+    //     canvas.width * 0 / 12, canvas.height * 10 / 12,
+
+    //     // end control point 1
+    //     canvas.width * 8 / 12, canvas.height * 10 / 12,
+
+    //     // end control point 2
+    //     canvas.width * 9 / 12, canvas.height * 20 / 12,
+
+    //     // end point
+    //     canvas.width * 12 / 12, canvas.height * 20 / 12
+    // );
+
+}
+
 function draw() {
 
     clear();
@@ -270,12 +334,4 @@ function draw() {
     // cluster1.pointsTester(true);
     // cluster2.pointsTester(true);
     // cluster3.pointsTester(true);
-}
-
-function windowResized() {
-    c_width = document.getElementById('cvnContainer').offsetWidth;
-    c_height = document.getElementById('cvnContainer').offsetHeight;
-    // resizeCanvas(c_width, c_height);
-    console.log(`new width: ${c_width}, new height: ${c_height}`);
-
 }
