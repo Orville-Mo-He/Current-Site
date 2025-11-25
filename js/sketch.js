@@ -17,6 +17,8 @@ var computedStyle = getComputedStyle(document.documentElement);
 
 function setup() {
 
+    // colorMode(HSB, 360, 100, 100)
+
     bgColor = color(computedStyle.getPropertyValue('background-color'));
     console.log(`bgColor: ${bgColor}`);
 
@@ -25,9 +27,9 @@ function setup() {
     canvas = createCanvas(c_width, c_height);
     canvas.parent('cnvContainer');
 
-    stroke(350, 50);
-    strokeWeight(1);
-    rect(0, 0, canvas.width, canvas.height);
+
+
+    // rect(0, 0, canvas.width, canvas.height);
     // line(canvas.width / 2, 0, canvas.width / 2, canvas.height);
 
     cluster1 = new Cluster(
@@ -210,6 +212,7 @@ class Cluster {
                 let noiseValAt_i = noise(0.1 * i);
                 // console.log(`noiseValAt_i: ${noiseValAt_i}`);
                 strokeWeight(1.5 - noiseValAt_i);
+                stroke(350, map(noiseValAt_i, 0, 1, 0, 100));
 
                 this.createLayer(
                     this.startP_x, map(this.startP_y * noiseValAt_i, 0, this.startP_y, this.startP_y, this.startP_y + startRange),

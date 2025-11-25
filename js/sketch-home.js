@@ -8,7 +8,7 @@ var computedStyle = getComputedStyle(document.documentElement);
 
 
 function setup() {
-
+    // colorMode(HSBA, 360, 100, 100, 350)
     bgColor = color(computedStyle.getPropertyValue('background-color'));
     console.log(`bgColor: ${bgColor}`);
     let minLayers = 100;
@@ -18,9 +18,7 @@ function setup() {
     canvas = createCanvas(c_width, c_height);
     canvas.parent('cnvContainer');
 
-    stroke(350, 50);
-    strokeWeight(1);
-    rect(0, 0, canvas.width, canvas.height);
+    // rect(0, 0, canvas.width, canvas.height);
     // line(canvas.width / 2, 0, canvas.width / 2, canvas.height);
 
     cluster1 = new Cluster(
@@ -56,21 +54,21 @@ function setup() {
         canvas.width * 12 / 12, canvas.height * 10 / 12
     );
 
-    cluster3 = new Cluster(
-        lpcArray[2],
+    // cluster3 = new Cluster(
+    //     lpcArray[2],
 
-        // start point
-        canvas.width * 0 / 12, canvas.height * 10 / 12,
+    //     // start point
+    //     canvas.width * 0 / 12, canvas.height * 10 / 12,
 
-        // end control point 1
-        canvas.width * 8 / 12, canvas.height * 10 / 12,
+    //     // end control point 1
+    //     canvas.width * 8 / 12, canvas.height * 10 / 12,
 
-        // end control point 2
-        canvas.width * 9 / 12, canvas.height * 20 / 12,
+    //     // end control point 2
+    //     canvas.width * 9 / 12, canvas.height * 20 / 12,
 
-        // end point
-        canvas.width * 12 / 12, canvas.height * 20 / 12
-    );
+    //     // end point
+    //     canvas.width * 12 / 12, canvas.height * 20 / 12
+    // );
 
 
 }
@@ -204,6 +202,8 @@ class Cluster {
                 let noiseValAt_i = noise(0.1 * i);
                 // console.log(`noiseValAt_i: ${noiseValAt_i}`);
                 strokeWeight(1.5 - noiseValAt_i);
+                stroke(350, map(noiseValAt_i, 0, 1, 0, 100));
+
 
                 this.createLayer(
                     this.startP_x, map(this.startP_y * noiseValAt_i, 0, this.startP_y, this.startP_y, this.startP_y + startRange),
@@ -259,20 +259,17 @@ function genLayersPerCluster(numClusters = 5, minLayers = 500, maxLayers = 1000)
 function draw() {
 
     clear();
-
-    stroke(350, 50);
     cluster1.createAllLayers(-canvas.height, -2 * canvas.height);
 
     // cluster2.pointsTester(true)
     cluster2.createAllLayers(canvas.height, canvas.height);
 
     // cluster3.pointsTester(true)
-    cluster3.createAllLayers(canvas.height/1.5, canvas.height/1.5);
+
 
     // cluster1.pointsTester(true);
     // cluster2.pointsTester(true);
     // cluster3.pointsTester(true);
-
 }
 
 function windowResized() {
