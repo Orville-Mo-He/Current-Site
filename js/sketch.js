@@ -17,7 +17,6 @@ var computedStyle = getComputedStyle(document.documentElement);
 
 function setup() {
 
-    // colorMode(HSB, 360, 100, 100)
 
     bgColor = color(computedStyle.getPropertyValue('background-color'));
     console.log(`bgColor: ${bgColor}`);
@@ -26,8 +25,6 @@ function setup() {
 
     canvas = createCanvas(c_width, c_height);
     canvas.parent('cnvContainer');
-
-
 
     // rect(0, 0, canvas.width, canvas.height);
     // line(canvas.width / 2, 0, canvas.width / 2, canvas.height);
@@ -265,6 +262,40 @@ function genLayersPerCluster(numClusters = 5, minLayers = 500, maxLayers = 1000)
 }
 
 
+function windowResized() {
+
+    c_width = cnvContainer.offsetWidth;
+    c_height = cnvContainer.offsetHeight;
+    resizeCanvas(c_width, c_height);
+
+    cluster1 = new Cluster(
+        lpcArray[0],
+        canvas.width * 0 / 12, canvas.height * 3 / 12,
+        canvas.width * 7 / 12, canvas.height * 1 / 12,
+        canvas.width * 9 / 12, canvas.height * 12 / 12,
+        canvas.width * 12 / 12, canvas.height * 13 / 12
+    );
+
+    // console.log('HI')
+    cluster2 = new Cluster(
+        lpcArray[1],
+        canvas.width * 0 / 12, canvas.height * 4 / 12,
+        canvas.width * 8 / 12, canvas.height * 3 / 12,
+        canvas.width * 9 / 12, canvas.height * 9 / 12,
+        canvas.width * 12 / 12, canvas.height * 10 / 12
+    );
+
+    cluster3 = new Cluster(
+        lpcArray[2],
+        canvas.width * 0 / 12, canvas.height * 10 / 12,
+        canvas.width * 8 / 12, canvas.height * 10 / 12,
+        canvas.width * 9 / 12, canvas.height * 20 / 12,
+        canvas.width * 12 / 12, canvas.height * 20 / 12
+    );
+
+}
+
+
 function draw() {
 
     clear();
@@ -281,13 +312,5 @@ function draw() {
     // cluster1.pointsTester(true);
     // cluster2.pointsTester(true);
     // cluster3.pointsTester(true);
-
-}
-
-function windowResized() {
-    c_width = document.getElementById('cvnContainer').offsetWidth;
-    c_height = document.getElementById('cvnContainer').offsetHeight;
-    // resizeCanvas(c_width, c_height);
-    console.log(`new width: ${c_width}, new height: ${c_height}`);
 
 }
