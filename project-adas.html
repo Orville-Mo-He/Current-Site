@@ -1,81 +1,150 @@
 <head>
-    <link rel="stylesheet" href="black-site style.css">
-    <link rel="stylesheet" href="style in-html.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orville Mo-He | Portfolio: What's Driving Drivers?</title>
+
+    <!--come back and add the specific Icons used-->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://use.typekit.net/ebp8gbo.css">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/black-site style.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/home.js" defer></script>
 </head>
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="style in-html.css">
+<body>
+    <header>
+        <nav id="nav">
+            <a id="logo-link" href="index.html">
+                <svg id="logo" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.00001 24.00001">
+                    <path class="cls-2"
+                        d="M.0178,7.0624V2.40011c0-.33663.27744-.60695.61404-.59979,7.39251.15732,13.86567,2.46273,20.94627,3.48074.62181.0894,1.23149.15845,1.8483.23053.29983.03504.52705.28755.53008.58936l.02273,1.83765c.00354.28643-.2214.52209-.50757.53581-7.82225.37508-15.43488-1.60814-23.23266-1.20279-.12025.00625-.22119-.08885-.22119-.20924v.00002Z" />
+                    <path class="cls-2"
+                        d="M7.9202,14.43182c.0698.62496,1.96862,1.58603,2.79558,1.94577,3.31215,1.43676,7.53398,2.43649,11.56034,2.91757.46259.05488.9287.10551,1.39664.1479.185.01676.32711.1707.32711.35643v.04975c0,.2066-.17436.37178-.38053.35793-.90786-.061-1.81615-.1599-2.7104-.27201-4.66967-.5863-9.56489-1.80723-13.40546-3.56078-.95906-.4392-3.16072-1.6118-3.24127-2.37529-.11062-1.05557,2.33806-1.33476,3.59892-1.37127,1.87409-.05477,3.88781.0902,5.77481.14389,2.52171.07087,5.13257.11167,7.6607.02148.78016-.02693,1.56029-.11168,2.33836-.12369.20044-.00309.36487.15841.36487.35884h0c0,.18944-.14754.34551-.33662.35756-.35042.02233-.70177.04665-1.05311.05803-2.17911.07409-4.43125.04081-6.60607-.01718-1.6271-.04402-3.36372-.16322-4.98007-.11812-1.08686.03006-3.1994.25879-3.1038,1.12321v-.00002Z" />
+                    <path class="cls-2"
+                        d="M24,23.11261v.41022c0,.26353-.21367.47717-.47724.47717h-13.37721c-.06208,0-.12425-.0094-.18343-.02814-2.28408-.72322-4.10677-1.84004-5.99657-2.88717-1.073-.59455-2.26235-1.14575-3.53816-1.56885-.24465-.08114-.40958-.31012-.40958-.56784v-2.4137c0-.36767.32869-.6517.69163-.59259,3.15429.51369,5.81958,1.75273,8.56568,2.79305,1.94619.73729,3.76043,1.53776,5.84473,2.11407,2.58531.71484,5.51822,1.38546,8.34306,1.66816.30545.03057.53709.28868.53709.59562Z" />
+                    <path class="cls-2"
+                        d="M23.99999.59936v3.9258c0,.35854-.31285.63616-.66918.59588-6.36768-.71984-12.09053-2.77806-18.43073-3.56955-1.50192-.1875-3.02314-.29992-4.55249-.36413-.18426-.00774-.3298-.15864-.3298-.34303v-.38482c.00001-.25378.20577-.45951.45959-.45951h22.92317c.33107,0,.59945.26834.59944.59936Z" />
+                    <path class="cls-2"
+                        d="M23.98193,20.56065v.8779c0,.09215-.0793.16473-.17109.15641-2.68015-.24314-5.33185-.65623-7.82192-1.31412-1.61368-.42634-3.23874-.93552-4.76675-1.46874-3.42815-1.1963-6.62963-2.82749-10.51284-3.4222C.29859,15.32698-.00204,14.96905.00001,14.55358l.01068-2.16218c.00218-.44174.34571-.80666.78649-.83693.13071-.00897.23793-.01547.28092-.01785.60747-.03364,1.21691-.02998,1.82542-.04055,6.49273-.11274,12.96088.75358,19.4693.49335.47081-.01882.98377-.05622,1.46221-.08439.08983-.00529.16498.06642.16498.1564h0c0,.08453-.06656.15329-.15105.15616-.52439.01783-1.09611.05893-1.60882.08085-2.10456.08998-4.2264.11874-6.33382.08177-2.57604-.04518-5.15442-.28967-7.73144-.22661-1.74036.04259-4.97998.36197-4.43765,1.89252.43773,1.23537,3.56056,2.59152,5.2213,3.22592,4.48717,1.7141,9.63604,2.75731,14.87845,3.13313.08172.00586.14496.07356.14495.15548Z" />
+                    <path class="cls-2"
+                        d="M23.99999,11.33122v.08028c0,.08205-.06334.1506-.14516.1568-7.84372.59454-15.83268-.8-23.67041-.27-.09024.0061-.16662-.06502-.16662-.15545v-1.61238c0-.21309.17067-.38861.38378-.39152,2.28342-.03124,4.51603.20737,6.74864.47086,5.45617.64392,10.90551,1.56448,16.5194,1.40186.18076-.00524.33038.13873.33037.31955Z" />
+                    <path class="cls-2"
+                        d="M23.99999,9.4296v.16653c0,.26357-.20966.481-.4732.48713-7.87551.18321-15.4048-1.96447-23.23802-1.79237-.1486.00326-.27097-.1154-.27097-.26401v-.14303c0-.09193.0722-.16825.16401-.17314,7.94355-.42265,15.42563,1.63054,23.34172,1.26674.25912-.01191.47646.19281.47646.45215Z" />
+                    <path class="cls-2"
+                        d="M3.96845,24H.61726c-.33107,0-.59945-.26835-.59945-.59936v-2.14015c0-.44912.47504-.73679.87514-.53265,1.26799.64697,2.37902,1.41031,3.43237,2.19074.46452.34416.22129,1.08143-.35686,1.08143h0Z" />
+                    <path class="cls-2"
+                        d="M23.97978,14.34055v3.93683c0,.24992-.21346.4456-.46268.42639-.50635-.03902-1.01177-.09485-1.51075-.15754-2.98092-.37451-6.10664-1.1536-8.55817-2.27362-.61276-.27995-2.01838-1.02901-2.06952-1.51609-.07077-.67406,1.49277-.85219,2.29772-.87573,1.19635-.03499,2.48227.05805,3.68651.09206,1.61014.04547,3.27703.07123,4.89076.01356.42662-.01465.85306-.05639,1.27887-.07293.24367-.00946.44725.18325.44725.42706h.00001Z" />
+                </svg>
+                <p>Orville Mo-He</p>
+            </a>
+            <ul id="desktop-nav" class="desktop-only">
+                <li><a href="index.html" id="home" class="active_nav">Home</a></li>
+                <li><a href="about%20me.html" id="about">About Me</a></li>
+                <li><a href="contact%20me.html" id="contact">Contact Me</a></li>
+            </ul>
 
+            <button type="button" class="mobile-tablet icon-only-button" id="open-mobile-nav">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
 
+            <div id="mobile-nav" class="mobile-tablet">
+                <div id="mobile-nav-main">
+                    <button type="button" class="icon-only-button" id="close-mobile-nav">
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </button>
+                    <ul id="mobile-nav-list">
+                        <li class="mobile-nav-links"><a href="index.html" id="home" class="active_nav">Home</a></li>
+                        <li class="mobile-nav-links"><a href="about%20me.html" id="about">About Me</a></li>
+                        <li class="mobile-nav-links"><a href="contact%20me.html" id="contact">Contact Me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <h1 class="page_title"><br>Orville Mo-He Portfolio: What's Driving Drivers?</h1>
+    </header>
 
-<div id="headimg" class="imgdiv ds rounded">{image 7}</div>
-<h1 class="title_name">What's Driving Drivers?</h1>
-<p style="max-width: 50ch;">
-    Understanding driver behavior and motivation and their impacts on ADAS engagement.<br><br>
-</p>
-<ul class="des_tags">
-    <li>Contextual Inquiry</li>
-    <li>Product Design</li>
-</ul>
+    <main>
 
-<div style="column-gap: 10%;" class="flexed qf_container">
-    <div>
-        <h2 class="quickfacts">My Role:</h2>
-        <ul class="quickfacts">
-            <li style="margin-top: 1rem">UX Researcher &amp; Designer</li>
-        </ul>
-    </div>
-    <div>
-        <h2 class="quickfacts">For:</h2>
-        <ul class="quickfacts">
-            <li style="margin-top: 1rem;">Interaction Design</li>
-            <li>
-                <small>University of Michigan Ann Arbor</small>
-            </li>
-            <li><small>January - May 2022</small></li>
-        </ul>
-    </div>
-</div>
-
-<div class="grid-1-1">
-    <div>
-        <h2>Client:</h2>
-        <p>Our client is a global technology company that designs and manufactures automotive
-            components and systems for a range of vehicle types, including hybrid and electric vehicles. Driven by its
-            commitment to making transportation safer, more sustainable, and more connected, our client is also at the
-            forefront of the development of autonomous driving technology and Advanced Driver Assistance Systems (ADAS),
-            with aims to expand research on driving in non-highway settings, including understanding the transition from
-            highway to non-highway driving, how users perceive the automation, and when they choose to engage/ disengage
-            the automation.
+        <div id="headimg" class="imgdiv ds rounded">{image 7}</div>
+        <h1 class="title_name">What's Driving Drivers?</h1>
+        <p style="max-width: 50ch;">
+            Understanding driver behavior and motivation and their impacts on ADAS engagement.<br><br>
         </p>
-    </div>
+        <ul class="des_tags">
+            <li>Contextual Inquiry</li>
+            <li>Product Design</li>
+        </ul>
 
-    <div>
-        <h2>Project Goal:</h2>
-        <p>This project aims to research driver behaviors and the use of partial automation on highway and
-            non-highway roads and the transitions between these driving environments. To distinguish assisted
-            driving experiences from the experience of driving as a whole, this project will be split into two
-            phases:
-        </p>
-        <ol>
-            <li class="titled-li">What's Driving Drivers?
-                <p>Understand driver needs, motivation, and experience and how these factors influence the use of
-                    autonomous driving features;</p>
-            </li>
-            <li class="titled-li">What's the current user experience?
-                <p>Understand the user experience of current implementations of autonomous driving features using an
-                    existing commercial model as a benchmark.</p>
-            </li>
-        </ol>
-        <p><small>For brevity, autonomous driving will be referred to as autopilot and/or ADAS (Advanced Driver
-                Assistance
-                Systems).</small></p>
-    </div>
-</div>
+        <div style="column-gap: 10%;" class="flexed qf_container">
+            <div>
+                <h2 class="quickfacts">My Role:</h2>
+                <ul class="quickfacts">
+                    <li style="margin-top: 1rem">UX Researcher &amp; Designer</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="quickfacts">For:</h2>
+                <ul class="quickfacts">
+                    <li style="margin-top: 1rem;">Interaction Design</li>
+                    <li>
+                        <small>University of Michigan Ann Arbor</small>
+                    </li>
+                    <li><small>January - May 2022</small></li>
+                </ul>
+            </div>
+        </div>
 
-<!-- <hr> -->
-<!-- SKIP FOR NOW -->
-<!--
+        <div class="grid-1-1">
+            <div>
+                <h2>Client:</h2>
+                <p>Our client is a global technology company that designs and manufactures automotive
+                    components and systems for a range of vehicle types, including hybrid and electric vehicles. Driven
+                    by its
+                    commitment to making transportation safer, more sustainable, and more connected, our client is also
+                    at the
+                    forefront of the development of autonomous driving technology and Advanced Driver Assistance Systems
+                    (ADAS),
+                    with aims to expand research on driving in non-highway settings, including understanding the
+                    transition from
+                    highway to non-highway driving, how users perceive the automation, and when they choose to engage/
+                    disengage
+                    the automation.
+                </p>
+            </div>
+
+            <div>
+                <h2>Project Goal:</h2>
+                <p>This project aims to research driver behaviors and the use of partial automation on highway and
+                    non-highway roads and the transitions between these driving environments. To distinguish assisted
+                    driving experiences from the experience of driving as a whole, this project will be split into two
+                    phases:
+                </p>
+                <ol>
+                    <li class="titled-li">What's Driving Drivers?
+                        <p>Understand driver needs, motivation, and experience and how these factors influence the use
+                            of
+                            autonomous driving features;</p>
+                    </li>
+                    <li class="titled-li">What's the current user experience?
+                        <p>Understand the user experience of current implementations of autonomous driving features
+                            using an
+                            existing commercial model as a benchmark.</p>
+                    </li>
+                </ol>
+                <p><small>For brevity, autonomous driving will be referred to as autopilot and/or ADAS (Advanced Driver
+                        Assistance
+                        Systems).</small></p>
+            </div>
+        </div>
+
+        <!-- <hr> -->
+        <!-- SKIP FOR NOW -->
+        <!--
     This section will include:
     Phase 1
     Methodology
@@ -83,379 +152,472 @@
     Synthesis
         Image and Text
 -->
-<div>
-    <h2>1. What's Driving Drivers?</h2>
-    <hr>
-    <div class="">
-        <h3>Research Goals</h3>
         <div>
-            <p>For this phase, to better focus our research, we centered our efforts around the following questions:
-            </p>
-            <ol class="" start="1">
-                <li class="big-1"> How do user needs and motivations affect their transportation preferences and needs?
-                </li>
-                <li class="big-1"> What are the differences in driving experience between highway
-                    and non‑highway environments;
-                    and how do these differences affect driver behavior across environments?
-                </li>
-                <li class="big-1">What are the factors that affect the desirability and usage of ADAS features?
-                </li>
-            </ol>
+            <h2>1. What's Driving Drivers?</h2>
+            <hr>
+            <div class="">
+                <h3>Research Goals</h3>
+                <div>
+                    <p>For this phase, to better focus our research, we centered our efforts around the following
+                        questions:
+                    </p>
+                    <ol class="" start="1">
+                        <li class="big-1"> How do user needs and motivations affect their transportation preferences and
+                            needs?
+                        </li>
+                        <li class="big-1"> What are the differences in driving experience between highway
+                            and non‑highway environments;
+                            and how do these differences affect driver behavior across environments?
+                        </li>
+                        <li class="big-1">What are the factors that affect the desirability and usage of ADAS features?
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <br>
         </div>
-    </div>
-    <br>
-</div>
 
-<div>
-    <h3>Methodology</h3>
-    <div class="grid-1-1">
-        <div class="no_t_m_children">
-            <p>To orient ourselves in the ADAS problem space and to gain a detailed understanding of the Tesla Model 3
-                (our client-selected benchmark) and its features, our group started with a round of secondary research
-                (on ADAS) and interaction mapping all of the Model 3’s ADAS related features.
-                <br><br>
-                We then furthered our understanding and contextualized our insight within the larger space of automation
-                within the Mobility industry through a comparative competitor analysis that covered 10 competitors (2x
-                each of direct, partial, indirect, parallel, and analogous competitors).
-                <br><br>
-                Finally, to better understand driver needs and motivations, the differences between driving in highway
-                and non-highway environments, and the use of ADAS features, we conducted a round of five interviews with
-                drivers with at least 2 years of experience using ADAS.
-            </p>
-        </div>
         <div>
-            <div class="imgdiv ds">{image 1}</div>
-            <div class="imgdiv ds">{image 2}</div>
-        </div>
-    </div>
-</div>
-<div>
-    <h3>Synthesis</h3>
-    <div class="grid-3-5">
-        <div class="no_t_m_children">
-            <p>We synthesized our insight by creating an affinity diagram where we compiled our insights and sorted it
-                into groups based on similarity, which allowed us to formulate key findings.
-            </p>
-            <p>To humanize our findings and contextualize driver needs, motivations, and frustrations; we created a set
-                of personas that capture the represented demographic and attitudinal range.
-            </p>
-        </div>
-        <div>
-            <div class="imgdiv">{image 3}</div>
+            <h3>Methodology</h3>
             <div class="grid-1-1">
-                <div class="imgdiv ds">{image 4}</div>
-                <div class="imgdiv ds">{image 5}</div>
-                <div class="imgdiv ds">{image 6}</div>
+                <div class="no_t_m_children">
+                    <p>To orient ourselves in the ADAS problem space and to gain a detailed understanding of the Tesla
+                        Model 3
+                        (our client-selected benchmark) and its features, our group started with a round of secondary
+                        research
+                        (on ADAS) and interaction mapping all of the Model 3’s ADAS related features.
+                        <br><br>
+                        We then furthered our understanding and contextualized our insight within the larger space of
+                        automation
+                        within the Mobility industry through a comparative competitor analysis that covered 10
+                        competitors (2x
+                        each of direct, partial, indirect, parallel, and analogous competitors).
+                        <br><br>
+                        Finally, to better understand driver needs and motivations, the differences between driving in
+                        highway
+                        and non-highway environments, and the use of ADAS features, we conducted a round of five
+                        interviews with
+                        drivers with at least 2 years of experience using ADAS.
+                    </p>
+                </div>
+                <div>
+                    <div class="imgdiv ds">{image 1}</div>
+                    <div class="imgdiv ds">{image 2}</div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<div>
-    <h3 id="Key_Insights:">Findings And Recommendations</h3>
-    <div class="grid-1-1">
-        <div class="grid-item">
-            <h4>Overarching Insight</h4>
-            <p>Drivers currently only use ADAS features if they are in low-complexity environments and when the
-                quality-of-life improvements that ADAS features bring to that driver outweighs the the added attention
-                and energy it requires from drivers and the percieved risk in using autonomous driving features.
+        <div>
+            <h3>Synthesis</h3>
+            <div class="grid-3-5">
+                <div class="no_t_m_children">
+                    <p>We synthesized our insight by creating an affinity diagram where we compiled our insights and
+                        sorted it
+                        into groups based on similarity, which allowed us to formulate key findings.
+                    </p>
+                    <p>To humanize our findings and contextualize driver needs, motivations, and frustrations; we
+                        created a set
+                        of personas that capture the represented demographic and attitudinal range.
+                    </p>
+                </div>
+                <div>
+                    <div class="imgdiv">{image 3}</div>
+                    <div class="grid-1-1">
+                        <div class="imgdiv ds">{image 4}</div>
+                        <div class="imgdiv ds">{image 5}</div>
+                        <div class="imgdiv ds">{image 6}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3 id="Key_Insights:">Findings And Recommendations</h3>
+            <div class="grid-1-1">
+                <div class="grid-item">
+                    <h4>Overarching Insight</h4>
+                    <p>Drivers currently only use ADAS features if they are in low-complexity environments and when the
+                        quality-of-life improvements that ADAS features bring to that driver outweighs the the added
+                        attention
+                        and energy it requires from drivers and the percieved risk in using autonomous driving features.
+                    </p>
+                    <div>
+                        <h4>Key Findings</h4>
+                        <ol class="" start="1">
+                            <li>Drivers do not currently trust autopilot systems, and, as a result, using autopilot
+                                features
+                                becomes more taxing because drivers feel the need to pay more attention when using
+                                autopilot
+                                features because drivers need to be already aware of the situation on the road if
+                                failures
+                                happen in order to react in time.
+                            </li>
+                            <li>Drivers that don’t fully trust autopilot systems will only use autopilot features under
+                                conditions that they believe to be perfect (long strips of low traffic highways in good
+                                weather)
+                            </li>
+                            <li>Due to current levels of trust, ADAS usage is mostly seen on longer trips rather than
+                                daily
+                                commutes, minimizing its benefits, namely making space for drivers to relax and
+                                providing
+                                convenience for tedious tasks.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <h4>Recommendations</h4>
+                    <ol>
+                        <li>Provide drivers with feedback when the complexity of their driving environment increases so
+                            users
+                            know when they need to pay more attention, create an internal monitor of the system's
+                            certainty of
+                            its evaluation of the driving environment, and let users know when that certainty drops
+                            below a
+                            certain threshold. <p>
+                                This would, ideally, eliminate the added attention draw that drivers face when using
+                                autopilot
+                                features <bold>in complex environments or when transitioning into complex environments.
+                                </bold>
+                            </p>
+                        </li>
+                        <li>
+                            Focus efforts on fixing ghost-braking and other failures that are not directly caused by
+                            environmental complexity. <p>
+                                This aims at eliminating the added attention draw that drivers face when using autopilot
+                                features <bold>in less complex environments due to not knowing when such events might
+                                    occur.
+                                </bold>
+                            </p>
+                        </li>
+                        <li>
+                            Create a log of all events and decisions that the system makes and encounters, categorize
+                            and
+                            distill this into a log of events that the driver can review and understand. <p>
+                                This would allow drivers to more easily understand when, where, and why errors or
+                                failures might
+                                occur in the future, thereby, improving driver confidence and trust in the system under
+                                conditions where the system would not fail.</p>
+                        </li>
+                        <li>Embrace regulation—especially when it comes to automation and safety. Well-regulated fields
+                            have
+                            less tolerance for risk, more standardized risk factors, and better and wider consensus on
+                            the
+                            perception of risk. Embracing regulation, decreases perceived risk and thereby increases
+                            willingness
+                            to purchase, test, and use automated products with high associated risk. Early proponents of
+                            regulation in lesser regulated fields are also often publicly perceived as safer than
+                            competitors.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+
+        <div>
+            <h2>2. What's the current user experience?</h2>
+            <hr>
+            <h3>Research Goal and Methodology</h3>
+            <p> To understand how the interface designs of autonomous vehicles affect the use of ADAS features and to
+                gain
+                insight into how to better design interfaces of autonomous vehicles, our team analyzed the interface of
+                the
+                Tesla Model 3 by conducting a heuristic analysis and a user test targeting the features and functions
+                that were
+                found to be highly relevant to building user’s trust towards the system during our user interviews. We
+                selected
+                the Model 3 as our ADAS benchmark to match our phase 1 benchmark and because Model 3 is a relative
+                affordability
+                model with an extremely high market share within the EV segment.
+            </p>
+            <h3>Overarching Insights</h3>
+            <ol>
+                <li>
+                    <p>
+                        <bold>Ambiguity or lack of clarity in the design of the interface</bold>, such as the lack of
+                        visual
+                        differentiation between Tesla’s “Autosteer” and “Navigate on Autopilot” modes [Heuristic Issue
+                        4],
+                        <bold>can induce user errors and confusion, such as believing that the system is failing when
+                            the system
+                            is actually functioning as intended</bold>. This can lead to decreased trust in the system
+                        as well
+                        as decreased willingness to test and use autonomous features.
+                    </p>
+                </li>
+                <li>
+                    <p>Lack of interface clarity and unintuitive design for features and actions outside of the
+                        autonomous
+                        system (such as adjusting mirrors, turning the car on/off, checking range, and opening windows)
+                        can lead
+                        to extraneous heuristic strain in learning the system.
+                    </p>
+                    <p>This extraneous learning strain diverts attention away from familiarization with the autonomous
+                        system/features and can also lead to a general sense of confusion, which can, in turn, lead to
+                        more
+                        misunderstandings and errors.
+                    </p>
+                </li>
+            </ol>
+            <p>These insights highlight the importance of designing clear and intuitive interfaces in the effort towards
+                widespread use and demand for autonomous driving systems and features.
             </p>
             <div>
-                <h4>Key Findings</h4>
-                <ol class="" start="1">
-                    <li>Drivers do not currently trust autopilot systems, and, as a result, using autopilot features
-                        becomes more taxing because drivers feel the need to pay more attention when using autopilot
-                        features because drivers need to be already aware of the situation on the road if failures
-                        happen in order to react in time.
-                    </li>
-                    <li>Drivers that don’t fully trust autopilot systems will only use autopilot features under
-                        conditions that they believe to be perfect (long strips of low traffic highways in good
-                        weather)
-                    </li>
-                    <li>Due to current levels of trust, ADAS usage is mostly seen on longer trips rather than daily
-                        commutes, minimizing its benefits, namely making space for drivers to relax and providing
-                        convenience for tedious tasks.
-                    </li>
-                </ol>
+                <h3>Heuristic Analysis</h3>
+                <p>In the heuristics evaluation, five team members each took turns taking the roles of one notetaker,
+                    one
+                    videographer, one driver, and three examiners. A Tesla Model 3 with a basic Tesla Autopilot software
+                    platform was rented for four hours for the evaluation and driven on a predetermined route from Ann
+                    Arbor to
+                    Kent, Michigan to include both highway and urban driving scenarios to meet our research needs. The
+                    data was
+                    collected during the driving with video clips and notes. The individual evaluation was the first
+                    step of
+                    this heuristic evaluation, in which each team member examined the system individually from the data
+                    collected based on the 10 heuristics principles. The findings from the individual evaluation were
+                    aggregated
+                    to a shared Google Sheet file for further analysis including debriefing the usability issues based
+                    on the 10
+                    principles, in-team discussion for the debriefing, and assigning priorities and severities for the
+                    issues
+                    based on the 0-4 rating of the heuristic evaluation. In this study, the rating of the usability
+                    heuristics
+                    issues was decided on the level of affecting users’ ability to drive, driving performance, and
+                    safety.
+                </p>
+                <div>
+                    <div class="grid-1-1 no-bm">
+                        <div>
+                            <h4 class="no-bm">Severity Level 4 Heuristic Violations:</h4>
+                        </div>
+                        <div>
+                            <h4 class="no-bm">Solutions:</h4>
+                        </div>
+                    </div>
+                    <ol class="grid-list no_t_m_children">
+                        <li class="grid-1-1">
+                            <div>
+                                <p>Lane Assist and Lane Departure Avoidance work to prevent the vehicle from drifting
+                                    out of the
+                                    bounds of the lane, but gets in the way when drivers are changing lanes or
+                                    intentionally
+                                    drifting outside of the bounds of the lane (such as to avoid obstacles).</p>
+                                <p><small>Heuristics violated: Visibility of system status | Match between system and
+                                        the real
+                                        world | User control and freedom | Consistency and standards | Error prevention
+                                        |
+                                        Flexibility and efficiency of use</small></p>
+                            </div>
+                            <div>
+                                <p>
+                                    Create a very quick and easy to temporarily disable Lane Departure Avoidance.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="grid-1-1">
+                            <div>
+                                <p>Testers were not able to discover how to turn off the car and could not determine if
+                                    locking
+                                    the vehicle and walking away would turn the car off. </p>
+                                <p><small>Heuristics Violated: Visibility of System Status | Recognition Rather Than
+                                        Recall |
+                                        Match between system and the real world | User control and freedom | Flexibility
+                                        of Use
+                                        | Consistency and standards</small></p>
+                            </div>
+                            <div>
+                                <p>
+                                    Create a very quick and easy to temporarily disable Lane Departure Avoidance.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="grid-1-1">
+                            <div>
+                                <p>System fails at roundabouts without warning and does not accurately display the
+                                    environment
+                                    (environment disappears entirely from display).</p>
+                                <p><small>Heuristics Violated: Visibility of System Status | Match between system &amp;
+                                        real
+                                        world |
+                                        Error prevention | Recognize, diagnose, and recover from errors</small></p>
+                            </div>
+                            <div>
+                                <p>
+                                    Better map wider arrays of traffic junctions.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="grid-1-1">
+                            <div>
+                                <p>Despite an extreme difference between "Autosteer" mode and "Navigate on Autopilot"
+                                    mode, the
+                                    two modes share the same icon, and are only differentiated by a slight change in
+                                    active
+                                    states of that shared icon. </p>
+                                <p><small>Heuristics Violated: Visibility of system status | Consistency and standards |
+                                        Error
+                                        prevention | Recognition rather than recall | (Possibly: Match between system
+                                        and the
+                                        real world)</small></p>
+                            </div>
+                            <div>
+                                <p>
+                                    Create a greater difference in the visual indication for the two states.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="grid-1-1">
+                            <div>
+                                <p>The button/switch to adjust the car window and to open the door is identical, which
+                                    confuses
+                                    the users. One team member accidentally opened the door by accident while the car
+                                    was
+                                    moving.</p>
+                                <p><small>Heuristics Violated: Aesthetic and Minimalist Design | Error prevention |
+                                        Recognition
+                                        rather than recall | Match between system and the real world</small></p>
+                            </div>
+                            <div>
+                                <p>
+                                    Visually and physically differentiate window switches from door switches.
+                                </p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <br>
+            <div>
+                <h3>Usability Test</h3>
+                <p>This usability test aims to understand how new drivers interact and understand Tesla’s unique user
+                    interface through a straightforward onboarding experience. This study incorporates five participants
+                    with no
+                    or little experience with Tesla to perform six tasks simulating everyday driving scenarios using a
+                    stationary Model 3. The tasks tested the common features of daily driving scenarios on the car
+                    display and
+                    were followed by usability interviews to gather feedback on the ease of completing tasks, any issues
+                    encountered, and overall impressions of the car display.
+                </p>
+                <div>
+                    <div class="grid-1-1 no-bm">
+                        <div>
+                            <h4 class="no-bm">Usability Issues:</h4>
+                        </div>
+                        <div>
+                            <h4 class="no-bm">Recommendations:</h4>
+                        </div>
+                    </div>
+                    <ol class="grid-list no_t_m_children">
+                        <li class="grid-1-1">
+                            <div>
+                                <p>The car icon does not communicate as the button to bring up the control hub, where
+                                    most
+                                    adjustments are made.</p>
+                            </div>
+                            <div>
+                                <p>
+                                    Redesign the Controls icon to more directly communicate its function:
+                                </p>
+                            </div>
+                        </li>
+                        <li class="grid-1-1">
+                            <div>
+                                <p>The left scroll wheel is used to adjust both mirrors, but users intuitively want to
+                                    adjust
+                                    the left mirror with the left scroll wheel and the right mirror with the right-side
+                                    scroll
+                                    wheel.</p>
+                            </div>
+                            <div>
+                                <p>
+                                    Allow users to use either scroll wheels to adjust either mirror.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="grid-1-1">
+                            <div>
+                                <p>Because doors and trunks are controlled through the 3D model, drivers intuitively
+                                    believe
+                                    that this is also true for adjusting mirrors and checking the tire pressure;
+                                    however, this
+                                    functionality is not built in, breaking the system’s own standards, and, when paired
+                                    with
+                                    Key Issue 1, leads to confusion about how to adjust mirrors and check tire pressure.
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                    Enable the adjustment-of mirrors and checking-of tire pressure through the 3D model
+                                    in the
+                                    center stack of the Tesla. Because doors and trunks are controlled by the driver
+                                    through the
+                                    3D model, drivers intuitively believe that this is also true for mirrors and tire
+                                    pressure.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="grid-1-1">
+                            <div>
+                                <p>The only way to see how many miles the vehicle can drive for any given level of
+                                    charge is to
+                                    tap the tiny battery percent number (not the icon, the number) on the top right of
+                                    the 3D
+                                    model of the car. It cannot be done through the Controls hub, where all other
+                                    similar tasks
+                                    are done. Of all of the users tested, only one figured out how to check the battery
+                                    status
+                                    in terms of miles (they did this after having tried everything else remotely related
+                                    to the
+                                    battery or the system status).</p>
+                            </div>
+                            <div>
+                                <p>
+                                    Build in the functionality of allowing users to change battery-percent view to
+                                    miles-left
+                                    view in the Charging Tab of the Controls hub.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="grid-1-1">
+                            <div>
+                                <p>The battery percentage and battery icon are two different buttons but communicate as
+                                    a single
+                                    element that is not interactive.</p>
+                            </div>
+                            <div>
+                                <p>
+                                    Visually separate the battery icon from the battery-percentage/miles-remaining
+                                    number such
+                                    that they present as separate entities while maintaining their relationship to one
+                                    another.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="grid-1-1">
+                            <div>
+                                <p>The documentation and labeling of information regarding speed are unclear, confusing,
+                                    and
+                                    incorrect, with "Set Speed" versus "Current Speed" and "Offset".</p>
+                            </div>
+                            <div>
+                                <p>
+                                    Rewrite the documentation for “Set Speed” and “Offset” using more comprehensible
+                                    terminologies and sentence structures that fit the average person.
+                                </p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
             </div>
         </div>
-        <div class="grid-item">
-            <h4>Recommendations</h4>
-            <ol>
-                <li>Provide drivers with feedback when the complexity of their driving environment increases so users
-                    know when they need to pay more attention, create an internal monitor of the system's certainty of
-                    its evaluation of the driving environment, and let users know when that certainty drops below a
-                    certain threshold. <p>
-                        This would, ideally, eliminate the added attention draw that drivers face when using autopilot
-                        features <bold>in complex environments or when transitioning into complex environments.</bold>
-                    </p>
-                </li>
-                <li>
-                    Focus efforts on fixing ghost-braking and other failures that are not directly caused by
-                    environmental complexity. <p>
-                        This aims at eliminating the added attention draw that drivers face when using autopilot
-                        features <bold>in less complex environments due to not knowing when such events might occur.
-                        </bold>
-                    </p>
-                </li>
-                <li>
-                    Create a log of all events and decisions that the system makes and encounters, categorize and
-                    distill this into a log of events that the driver can review and understand. <p>
-                        This would allow drivers to more easily understand when, where, and why errors or failures might
-                        occur in the future, thereby, improving driver confidence and trust in the system under
-                        conditions where the system would not fail.</p>
-                </li>
-                <li>Embrace regulation—especially when it comes to automation and safety. Well-regulated fields have
-                    less tolerance for risk, more standardized risk factors, and better and wider consensus on the
-                    perception of risk. Embracing regulation, decreases perceived risk and thereby increases willingness
-                    to purchase, test, and use automated products with high associated risk. Early proponents of
-                    regulation in lesser regulated fields are also often publicly perceived as safer than competitors.
-                </li>
-            </ol>
-        </div>
-    </div>
-
-</div>
-
-<div>
-    <h2>2. What's the current user experience?</h2>
-    <hr>
-    <h3>Research Goal and Methodology</h3>
-    <p> To understand how the interface designs of autonomous vehicles affect the use of ADAS features and to gain
-        insight into how to better design interfaces of autonomous vehicles, our team analyzed the interface of the
-        Tesla Model 3 by conducting a heuristic analysis and a user test targeting the features and functions that were
-        found to be highly relevant to building user’s trust towards the system during our user interviews. We selected
-        the Model 3 as our ADAS benchmark to match our phase 1 benchmark and because Model 3 is a relative affordability
-        model with an extremely high market share within the EV segment.
-    </p>
-    <h3>Overarching Insights</h3>
-    <ol>
-        <li>
-            <p>
-                <bold>Ambiguity or lack of clarity in the design of the interface</bold>, such as the lack of visual
-                differentiation between Tesla’s “Autosteer” and “Navigate on Autopilot” modes [Heuristic Issue 4],
-                <bold>can induce user errors and confusion, such as believing that the system is failing when the system
-                    is actually functioning as intended</bold>. This can lead to decreased trust in the system as well
-                as decreased willingness to test and use autonomous features.
-            </p>
-        </li>
-        <li>
-            <p>Lack of interface clarity and unintuitive design for features and actions outside of the autonomous
-                system (such as adjusting mirrors, turning the car on/off, checking range, and opening windows) can lead
-                to extraneous heuristic strain in learning the system.
-            </p>
-            <p>This extraneous learning strain diverts attention away from familiarization with the autonomous
-                system/features and can also lead to a general sense of confusion, which can, in turn, lead to more
-                misunderstandings and errors.
-            </p>
-        </li>
-    </ol>
-    <p>These insights highlight the importance of designing clear and intuitive interfaces in the effort towards
-        widespread use and demand for autonomous driving systems and features.
-    </p>
-    <div>
-        <h3>Heuristic Analysis</h3>
-        <p>In the heuristics evaluation, five team members each took turns taking the roles of one notetaker, one
-            videographer, one driver, and three examiners. A Tesla Model 3 with a basic Tesla Autopilot software
-            platform was rented for four hours for the evaluation and driven on a predetermined route from Ann Arbor to
-            Kent, Michigan to include both highway and urban driving scenarios to meet our research needs. The data was
-            collected during the driving with video clips and notes. The individual evaluation was the first step of
-            this heuristic evaluation, in which each team member examined the system individually from the data
-            collected based on the 10 heuristics principles. The findings from the individual evaluation were aggregated
-            to a shared Google Sheet file for further analysis including debriefing the usability issues based on the 10
-            principles, in-team discussion for the debriefing, and assigning priorities and severities for the issues
-            based on the 0-4 rating of the heuristic evaluation. In this study, the rating of the usability heuristics
-            issues was decided on the level of affecting users’ ability to drive, driving performance, and safety.
-        </p>
         <div>
-            <div class="grid-1-1 no-bm">
-                <div>
-                    <h4 class="no-bm">Severity Level 4 Heuristic Violations:</h4>
-                </div>
-                <div>
-                    <h4 class="no-bm">Solutions:</h4>
-                </div>
-            </div>
-            <ol class="grid-list no_t_m_children">
-                <li class="grid-1-1">
-                    <div>
-                        <p>Lane Assist and Lane Departure Avoidance work to prevent the vehicle from drifting out of the
-                            bounds of the lane, but gets in the way when drivers are changing lanes or intentionally
-                            drifting outside of the bounds of the lane (such as to avoid obstacles).</p>
-                        <p><small>Heuristics violated: Visibility of system status | Match between system and the real
-                                world | User control and freedom | Consistency and standards | Error prevention |
-                                Flexibility and efficiency of use</small></p>
-                    </div>
-                    <div>
-                        <p>
-                            Create a very quick and easy to temporarily disable Lane Departure Avoidance.
-                        </p>
-                    </div>
-                </li>
-                <li class="grid-1-1">
-                    <div>
-                        <p>Testers were not able to discover how to turn off the car and could not determine if locking
-                            the vehicle and walking away would turn the car off. </p>
-                        <p><small>Heuristics Violated: Visibility of System Status | Recognition Rather Than Recall |
-                                Match between system and the real world | User control and freedom | Flexibility of Use
-                                | Consistency and standards</small></p>
-                    </div>
-                    <div>
-                        <p>
-                            Create a very quick and easy to temporarily disable Lane Departure Avoidance.
-                        </p>
-                    </div>
-                </li>
-                <li class="grid-1-1">
-                    <div>
-                        <p>System fails at roundabouts without warning and does not accurately display the environment
-                            (environment disappears entirely from display).</p>
-                        <p><small>Heuristics Violated: Visibility of System Status | Match between system &amp; real
-                                world |
-                                Error prevention | Recognize, diagnose, and recover from errors</small></p>
-                    </div>
-                    <div>
-                        <p>
-                            Better map wider arrays of traffic junctions.
-                        </p>
-                    </div>
-                </li>
-                <li class="grid-1-1">
-                    <div>
-                        <p>Despite an extreme difference between "Autosteer" mode and "Navigate on Autopilot" mode, the
-                            two modes share the same icon, and are only differentiated by a slight change in active
-                            states of that shared icon. </p>
-                        <p><small>Heuristics Violated: Visibility of system status | Consistency and standards | Error
-                                prevention | Recognition rather than recall | (Possibly: Match between system and the
-                                real world)</small></p>
-                    </div>
-                    <div>
-                        <p>
-                            Create a greater difference in the visual indication for the two states.
-                        </p>
-                    </div>
-                </li>
-                <li class="grid-1-1">
-                    <div>
-                        <p>The button/switch to adjust the car window and to open the door is identical, which confuses
-                            the users. One team member accidentally opened the door by accident while the car was
-                            moving.</p>
-                        <p><small>Heuristics Violated: Aesthetic and Minimalist Design | Error prevention | Recognition
-                                rather than recall | Match between system and the real world</small></p>
-                    </div>
-                    <div>
-                        <p>
-                            Visually and physically differentiate window switches from door switches.
-                        </p>
-                    </div>
-                </li>
-            </ol>
+            <hr>
+            <p>byes~ thank you!</p>
         </div>
-    </div>
-    <br>
-    <div>
-        <h3>Usability Test</h3>
-        <p>This usability test aims to understand how new drivers interact and understand Tesla’s unique user
-            interface through a straightforward onboarding experience. This study incorporates five participants with no
-            or little experience with Tesla to perform six tasks simulating everyday driving scenarios using a
-            stationary Model 3. The tasks tested the common features of daily driving scenarios on the car display and
-            were followed by usability interviews to gather feedback on the ease of completing tasks, any issues
-            encountered, and overall impressions of the car display.
-        </p>
-        <div>
-            <div class="grid-1-1 no-bm">
-                <div>
-                    <h4 class="no-bm">Usability Issues:</h4>
-                </div>
-                <div>
-                    <h4 class="no-bm">Recommendations:</h4>
-                </div>
-            </div>
-            <ol class="grid-list no_t_m_children">
-                <li class="grid-1-1">
-                    <div>
-                        <p>The car icon does not communicate as the button to bring up the control hub, where most
-                            adjustments are made.</p>
-                    </div>
-                    <div>
-                        <p>
-                            Redesign the Controls icon to more directly communicate its function:
-                        </p>
-                    </div>
-                </li>
-                <li class="grid-1-1">
-                    <div>
-                        <p>The left scroll wheel is used to adjust both mirrors, but users intuitively want to adjust
-                            the left mirror with the left scroll wheel and the right mirror with the right-side scroll
-                            wheel.</p>
-                    </div>
-                    <div>
-                        <p>
-                            Allow users to use either scroll wheels to adjust either mirror.
-                        </p>
-                    </div>
-                </li>
-                <li class="grid-1-1">
-                    <div>
-                        <p>Because doors and trunks are controlled through the 3D model, drivers intuitively believe
-                            that this is also true for adjusting mirrors and checking the tire pressure; however, this
-                            functionality is not built in, breaking the system’s own standards, and, when paired with
-                            Key Issue 1, leads to confusion about how to adjust mirrors and check tire pressure.</p>
-                    </div>
-                    <div>
-                        <p>
-                            Enable the adjustment-of mirrors and checking-of tire pressure through the 3D model in the
-                            center stack of the Tesla. Because doors and trunks are controlled by the driver through the
-                            3D model, drivers intuitively believe that this is also true for mirrors and tire pressure.
-                        </p>
-                    </div>
-                </li>
-                <li class="grid-1-1">
-                    <div>
-                        <p>The only way to see how many miles the vehicle can drive for any given level of charge is to
-                            tap the tiny battery percent number (not the icon, the number) on the top right of the 3D
-                            model of the car. It cannot be done through the Controls hub, where all other similar tasks
-                            are done. Of all of the users tested, only one figured out how to check the battery status
-                            in terms of miles (they did this after having tried everything else remotely related to the
-                            battery or the system status).</p>
-                    </div>
-                    <div>
-                        <p>
-                            Build in the functionality of allowing users to change battery-percent view to miles-left
-                            view in the Charging Tab of the Controls hub.
-                        </p>
-                    </div>
-                </li>
-                <li class="grid-1-1">
-                    <div>
-                        <p>The battery percentage and battery icon are two different buttons but communicate as a single
-                            element that is not interactive.</p>
-                    </div>
-                    <div>
-                        <p>
-                            Visually separate the battery icon from the battery-percentage/miles-remaining number such
-                            that they present as separate entities while maintaining their relationship to one another.
-                        </p>
-                    </div>
-                </li>
-                <li class="grid-1-1">
-                    <div>
-                        <p>The documentation and labeling of information regarding speed are unclear, confusing, and
-                            incorrect, with "Set Speed" versus "Current Speed" and "Offset".</p>
-                    </div>
-                    <div>
-                        <p>
-                            Rewrite the documentation for “Set Speed” and “Offset” using more comprehensible
-                            terminologies and sentence structures that fit the average person.
-                        </p>
-                    </div>
-                </li>
-            </ol>
-        </div>
-    </div>
-</div>
+    </main>
 
-
-<div>
-    <hr>
-    <p>byes~ thank you!</p>
-</div>
+    <footer id=footer>
+        <br><br><br><br>
+        <hr>
+        <p>Designed and coded by Orville Mo-He &#169;</p>
+    </footer>
+</body>
