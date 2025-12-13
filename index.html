@@ -13,30 +13,30 @@
     <script src="js/script.js" defer></script>
     <script src="js/sketch-home.js" defer></script>
     <script defer>
-        // var home_button = document.getElementById('home');
-        // var to_clear = document.querySelector('active_nav');
+        // var home-button = document.getElementById('home');
+        // var to-clear = document.querySelector('active-nav');
 
-        // function mark_active() {
-        //     if (to_clear) {
-        //         to_clear.classList.remove("active_nav");
+        // function mark-active() {
+        //     if (to-clear) {
+        //         to-clear.classList.remove("active-nav");
         //     }
         //     else(){
         //         return;
         //     }
         // }
 
-        // function clear_it_all(){
-        //     mark_active();
+        // function clear-it-all(){
+        //     mark-active();
         //     console.log("hi");
         // }
 
         window.addEventListener("load", function () {
             //console.log("Good job opening the window");
 
-            var to_clear = document.querySelector('active_nav');
+            var to_clear = document.querySelector('active-nav');
 
             if (to_clear) {
-                to_clear.classList.remove("active_nav");
+                to_clear.classList.remove("active-nav");
             }
         });
     </script>
@@ -69,7 +69,7 @@
                 <p>Orville Mo-He</p>
             </a>
             <ul id="desktop-nav" class="desktop-only">
-                <li><a href="index.html" id="home" class="active_nav">Home</a></li>
+                <li><a href="index.html" id="home" class="active-nav">Home</a></li>
                 <li><a href="about%20me.html" id="about">About Me</a></li>
                 <li><a href="contact%20me.html" id="contact">Contact Me</a></li>
             </ul>
@@ -86,123 +86,131 @@
                         </span>
                     </button>
                     <ul id="mobile-nav-list">
-                        <li class="mobile-nav-links"><a href="index.html" id="home" class="active_nav">Home</a></li>
+                        <li class="mobile-nav-links"><a href="index.html" id="home" class="active-nav">Home</a></li>
                         <li class="mobile-nav-links"><a href="about%20me.html" id="about">About Me</a></li>
                         <li class="mobile-nav-links"><a href="contact%20me.html" id="contact">Contact Me</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <h1 class="page_title"><br>Orville Mo-He's Portfolio</h1>
+        <h1 class="page-title"><br>Orville Mo-He's Portfolio</h1>
     </header>
 
     <main>
-
         <div id="home-hero">
             <!-- <div id="home-hero-portrait" class="imgdiv"><img src="assets/home/generated-placeholder.png" alt="Semi-close-up portrait of Orville"></div> -->
             <div id="home-hero-portrait" class="imgdiv"><img src="assets/home/untitled-glance.png"
                     alt="Photograph of a glance. Only the eyes are visible."></div>
             <div id="cnvContainer"></div>
-            <p id="personal-intro" class="big-paragraph">Hiya, I'm Orville. <br><br>
-                I am a multi-disciplinary designer and UX researcher, and I&nbsp;am passionate about
-                working with people to help them unearth the root causes of the challenges they may be facing and
-                designing...</p>
+            <p id="hello" class="big-paragraph">Hi, I'm Orville.</p>
+            <div id="personal-intro">
+                <p class="big-paragraph">
+                    I am a multi-disc. designer and user experience researcher and&nbsp;I&nbsp;help clients unearth the
+                    root-causes of the
+                    challenges they face and (co-)design the perfect solutions for my clients’ needs, context, and
+                    journey
+                    ahead.</p>
+                <p class="big-paragraph">I’m always open to new ideas, perspectives, and opportunities; if&nbsp;you’re
+                    interested in chatting
+                    with me&nbsp;please email me at: <a href="mailto:moheo@umich.edu.">moheo@umich.edu</a>.</p>
+            </div>
         </div>
 
         <div class="portfolio">
             <hr>
-            <h2 class="portfolio-gallery-name"><small>Selected Projects</small></h2>
+            <h2 id="portfolio-gallery-name"><small>Selected Projects</small></h2>
             <!-- <h2 class="portfolio-gallery-name">Selected Projects</h2>   -->
-            <div class="portfolio-gallery grid-1-1">
-                <div class="project-card">
-                    <div class="project-cover rounded ds imgdiv"><a href="project-adas.html" rel="history" class="imgdiv"><img
-                                src="assets/projects/placeholder-project.png" alt=""></a>
+            <div id="portfolio-gallery" class="full-width-grid">
+                <a class="project-card-wrapper" href="project-adas.html">
+                    <div class="project-card">
+                        <div class="project-cover imgdiv"><img
+                                    src="assets/projects/placeholder-project.png" alt="">
+                        </div>
+                        <div class="project-description">
+                            <h3 class="project-name">Autonomous Driving Interface</h3>
+                            <ul class="project-tags-list">
+                                <li class="project-tag alt-font">Driver Behavior</li>
+                                <li class="project-tag alt-font">HMI Research</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="project_description">
-                        <h3 class="project-name"><a href="project-adas.html" rel="history">
-                                What's Driving Drivers?</a>
-                        </h3>
-                        <p class="project-gallery-tags">Driver Behavior and HMI Research</p>
-                    </div>
-                    <a href="project-adas.html" rel="history" class="view_project">
-                        <div class="button">View Project</div>
-                    </a>
-                </div>
+                </a>
 
-                <div class="project-card">
-                    <div class="project_cover"><a href="dearborn" rel="history" class="imgdiv"><img
-                                src="assets/projects/placeholder-project.png" alt=""></a>
+                <a class="project-card-wrapper" href="dearborn">
+                    <div class="project-card">
+                        <div class="project-cover imgdiv"><img src="assets/projects/placeholder-project.png" alt="">
+                        </div>
+                        <div class="project-description">
+                            <h3 class="project-name">City of Dearborn: Permit&nbsp;Applications</h3>
+                            <ul class="project-tags-list">
+                                <li class="project-tag alt-font">Website Redesign</li>
+                                <li class="project-tag alt-font">Systems Optimization</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="project_description">
-                        <h3 class="project-name"><a href="dearborn" rel="history">
-                                Permitting Better Permitting</a>
-                        </h3>
-                        <p class="project-gallery-tags">Website and Systems Redesign</p>
-                    </div>
-                    <a href="dearborn" rel="history" class="view_project">
-                        <div class="button">View Project</div>
-                    </a>
-                </div>
+                </a>
 
-                <div class="project-card">
-                    <div class="cai project_cover"><a href="CAI" rel="history" class="imgdiv"><img
-                                src="assets/projects/placeholder-project.png" alt=""></a>
+                <a class="project-card-wrapper" href="CAI">
+                    <div class="project-card">
+                        <div class="cai project-cover imgdiv"><img src="assets/projects/placeholder-project.png" alt="">
+                        </div>
+                        <div class="project-description">
+                            <h3 class="project-name">The Center for Academic Innovation</h3>
+                            <ul class="project-tags-list">
+                                <li class="project-tag alt-font">Systems Design</li>
+                                <li class="project-tag alt-font">Strategy Design</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="project_description">
-                        <h3 class="project-name"><a href="CAI" rel="history">The Center for Academic Innovation</a>
-                        </h3>
-                        <p class="project-gallery-tags">Systems and Strategy Design</p>
-                    </div>
-                    <a href="CAI" rel="history" class="view_project">
-                        <div class="button">View Project</div>
-                    </a>
-                </div>
+                </a>
 
-                <div class="project-card">
-                    <div class="cpf project_cover">
-                        <a href="CityParks" rel="history" class="imgdiv"><img
-                                src="assets/projects/placeholder-project.png" alt=""></a>
+                <a class="project-card-wrapper" href="CityParks">
+                    <div class="project-card">
+                        <div class="cpf project-cover imgdiv">
+                            <img src="assets/projects/placeholder-project.png"
+                                    alt="">
+                        </div>
+                        <div class="project-description">
+                            <h3 class="project-name">CityParks Foundation</h3>
+                            <ul class="project-tags-list">
+                                <li class="project-tag alt-font">User Experience</li>
+                                <li class="project-tag alt-font">Interface Design</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="project_description">
-                        <h3 class="project-name"><a href="CityParks" rel="history">CityParks Foundation Website
-                                Redesign</a></h3>
-                        <p class="project-gallery-tags" style="margin-top:0.3rem;">User Experience &amp; Interface
-                            Design</p>
-                    </div>
-                    <a href="CityParks" rel="history" class="view_project">
-                        <div class="button">View Project</div>
-                    </a>
-                </div>
+                </a>
 
-                <div class="project-card">
-                    <div class="project_cover uo">
-                        <a href="Urban-Outreach" rel="history" class="imgdiv"><img
-                                src="assets/projects/placeholder-project.png" alt=""></a>
+                <a class="project-card-wrapper" href="Urban-Outreach">
+                    <div class="project-card">
+                        <div class="project-cover uo imgdiv">
+                            <img src="assets/projects/placeholder-project.png"
+                                    alt="">
+                        </div>
+                        <div class="project-description">
+                            <h3 class="project-name">The Urban Outreach Center NYC</h3>
+                            <ul class="project-tags-list">
+                                <li class="project-tag alt-font">Usability Testing</li>
+                                <li class="project-tag alt-font">Consulting</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="project_description">
-                        <h3 class="project-name"><a href="Urban-Outreach" rel="history">Urban Outreach Center NYC</a>
-                        </h3>
-                        <p class="project-gallery-tags">Usability Testing and Consulting</p>
-                    </div>
-                    <a href="Urban-Outreach" rel="history" class="view_project">
-                        <div class="button">View Project</div>
-                    </a>
-                </div>
+                </a>
 
-                <div class="project-card">
-                    <div class="atmos_cover project_cover">
-                        <a href="Atmos" rel="history" class="imgdiv"><img src="assets/projects/placeholder-project.png"
-                                alt=""></a>
+                <a class="project-card-wrapper" href="Atmos">
+                    <div class="project-card">
+                        <div class="atmos-cover project-cover imgdiv">
+                            <img src="assets/projects/placeholder-project.png"
+                                    alt="">
+                        </div>
+                        <div class="project-description">
+                            <h3 class="project-name">ATMOS</h3>
+                            <ul class="project-tags-list">
+                                <li class="project-tag alt-font">Design Thinking</li>
+                                <li class="project-tag alt-font">Product Development</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="project_description">
-                        <h3 class="project-name"><a href="Atmos" rel="history">ATMOS</a></h3>
-                        <p class="project-gallery-tags" style="margin-bottom:0;">Design Thinking &amp; Product
-                            Development</p>
-                    </div>
-                    <a href="Atmos" rel="history" class="view_project">
-                        <div class="button">View Project</div>
-                    </a>
-                </div>
+                </a>
             </div>
         </div>
     </main>
@@ -210,6 +218,6 @@
     <footer id=footer>
         <br><br><br><br>
         <hr>
-        <p>Designed and coded by Orville Mo-He &#169;</p>
+        <p>Designed and coded by Orville&nbsp;Mo&#8209;He &#169;&nbsp;2019</p>
     </footer>
 </body>
