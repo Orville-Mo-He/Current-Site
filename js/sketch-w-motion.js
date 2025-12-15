@@ -208,34 +208,36 @@ class Cluster {
             for (let i = 0; i < this.numLayers; i++) {
                 let noiseValAt_i = noise(0.1 * i);
                 // console.log(`noiseValAt_i: ${noiseValAt_i}`);
+                let strokeVal = noise(0.001 * (noiseValAt_i + frameCount));
                 strokeWeight(1.5 - noiseValAt_i);
-                stroke(255, map(noiseValAt_i, 0, 1, 0, 100));
+                stroke(255, map(strokeVal, 0, 1, 0, 100));
 
                 this.createLayer(
-                    this.startP_x, map(this.startP_y * noiseValAt_i, 0, this.startP_y, this.startP_y, this.startP_y + startRange),
-                    // this.apexCP1_x, this.apexCP1_y + (endRange * noiseValAt_i * i),
-                    // this.apexCP2_x, this.apexCP2_y + (endRange * noiseValAt_i * i),
-                    // this.apex_x, this.apex_y + (endRange * noiseValAt_i * i),
-                    this.endCP1_x, map(this.endCP1_y * noiseValAt_i, 0, this.endCP1_y, this.endCP1_y, this.endCP1_y + startRange),
-                    this.endCP2_x, map(this.endCP2_y * noiseValAt_i, 0, this.endCP2_y, this.endCP2_y, this.endCP2_y + endRange),
-                    this.endP_x, map(this.endP_y * noiseValAt_i, 0, this.endP_y, this.endP_y, this.endP_y + endRange)
+                    this.startP_x, map(this.startP_y * strokeVal, 0, this.startP_y, this.startP_y, this.startP_y + startRange),
+                    // this.apexCP1_x, this.apexCP1_y + (endRange * strokeVal * i),
+                    // this.apexCP2_x, this.apexCP2_y + (endRange * strokeVal * i),
+                    // this.apex_x, this.apex_y + (endRange * strokeVal * i),
+                    this.endCP1_x, map(this.endCP1_y * strokeVal, 0, this.endCP1_y, this.endCP1_y, this.endCP1_y + startRange),
+                    this.endCP2_x, map(this.endCP2_y * strokeVal, 0, this.endCP2_y, this.endCP2_y, this.endCP2_y + endRange),
+                    this.endP_x, map(this.endP_y * strokeVal, 0, this.endP_y, this.endP_y, this.endP_y + endRange)
                 );
             }
         } else {
             for (let i = 0; i < this.numLayers; i++) {
                 let noiseValAt_i = noise(0.1 * i);
                 // console.log(`noiseValAt_i: ${noiseValAt_i}`);
+                let strokeVal = noise(0.001 * (noiseValAt_i + frameCount));
                 strokeWeight(1.5 - noiseValAt_i);
-                stroke(255, map(noiseValAt_i, 0, 1, 0, 100));
+                stroke(255, map(strokeVal, 0, 1, 0, 100));
 
                 this.createLayer(
-                    this.startP_x, map(this.startP_y * noiseValAt_i, 0, this.startP_y, this.startP_y + startRange, this.startP_y),
-                    // this.apexCP1_x, this.apexCP1_y + (endRange * noiseValAt_i * i),
-                    // this.apexCP2_x, this.apexCP2_y + (endRange * noiseValAt_i * i),
-                    // this.apex_x, this.apex_y + (endRange * noiseValAt_i * i),
-                    this.endCP1_x, map(this.endCP1_y * noiseValAt_i, 0, this.endCP1_y, this.endCP1_y + startRange, this.endCP1_y),
-                    this.endCP2_x, map(this.endCP2_y * noiseValAt_i, 0, this.endCP2_y, this.endCP2_y + endRange, this.endCP2_y),
-                    this.endP_x, map(this.endP_y * noiseValAt_i, 0, this.endP_y, this.endP_y + endRange, this.endP_y)
+                    this.startP_x, map(this.startP_y * strokeVal, 0, this.startP_y, this.startP_y + startRange, this.startP_y),
+                    // this.apexCP1_x, this.apexCP1_y + (endRange * strokeVal * i),
+                    // this.apexCP2_x, this.apexCP2_y + (endRange * strokeVal * i),
+                    // this.apex_x, this.apex_y + (endRange * strokeVal * i),
+                    this.endCP1_x, map(this.endCP1_y * strokeVal, 0, this.endCP1_y, this.endCP1_y + startRange, this.endCP1_y),
+                    this.endCP2_x, map(this.endCP2_y * strokeVal, 0, this.endCP2_y, this.endCP2_y + endRange, this.endCP2_y),
+                    this.endP_x, map(this.endP_y * strokeVal, 0, this.endP_y, this.endP_y + endRange, this.endP_y)
                 );
             }
         }

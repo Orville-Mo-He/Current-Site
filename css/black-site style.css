@@ -690,11 +690,6 @@ a.project-card-wrapper {
 	/* letter-spacing: -0.0125em; */
 }
 
-.member-role {
-	/* text-transform: uppercase; */
-
-}
-
 
 
 
@@ -1069,9 +1064,6 @@ a:focus {
 		grid-column: var(--lcl-col-start) / span 12;
 		grid-row: 3 / span 12;
 	}
-
-
-	#project-name {}
 
 	#title-sec {
 		grid-column: var(--main-col-start) / -1;

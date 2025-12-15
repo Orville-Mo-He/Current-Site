@@ -111,12 +111,6 @@ class Cluster {
         this.endP_x = endP_x;
         this.endP_y = endP_y;
 
-
-
-        // what needs to have the organic?
-        // the distances between layers
-        // the amount of layers per cluster
-        // the shape of each layer?
     }
 
     pointsTester(bool = true) {
