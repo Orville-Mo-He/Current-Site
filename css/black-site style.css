@@ -525,6 +525,12 @@ nav {
 	font-size: var(--big-p-size);
 }
 
+#email-me {
+	width: fit-content;
+	margin: -1ch;
+	padding: 1ch;
+}
+
 /* HOME - Portfolio Gallery */
 
 a.project-card-wrapper {
@@ -610,7 +616,7 @@ a.project-card-wrapper {
 	grid-row: 6 / span 7;
 	overflow: hidden;
 	z-index: -1;
-	border: 1px solid var(--om-white-10);
+	/* border: 1px solid var(--om-white-10); */
 }
 
 
@@ -962,7 +968,7 @@ a:focus {
 	#home-hero #cnvContainer {
 		--lcl-col-start: calc(var(--main-col-start) + 6);
 		grid-column: var(--lcl-col-start) / -4;
-		grid-row: 4 / span 8;
+		grid-row: 4 / span 9;
 	}
 
 	#hello {
@@ -1212,6 +1218,10 @@ a:focus {
 		font-size: var(--s-p-size);
 	}
 
+	#project-hero #cnvContainer {
+		grid-column: var(--lcl-col-start) / -4;
+	}
+
 }
 
 @media screen and (min-width: 1240px) {
@@ -1234,6 +1244,17 @@ a:focus {
 		font-size: var(--p-size);
 	}
 
+	#home-hero-portrait {
+		grid-row: 9 / span 3;
+	}
+
+	/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+	/* PROJECTS - Hero */
+
+	#project-hero #cnvContainer {
+		grid-column: var(--lcl-col-start) / -7;
+	}
+
 
 }
 
@@ -1241,6 +1262,13 @@ a:focus {
 
 	#desktop-nav {
 		grid-column: 10 / span 3;
+	}
+
+	/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+	/* PROJECTS - Hero */
+
+	#project-hero #cnvContainer {
+		grid-column: var(--lcl-col-start) / -8;
 	}
 
 	/* PROJECTS - Sections */
@@ -1266,4 +1294,6 @@ a:focus {
 		margin-left: 0;
 		padding: 0;
 	} */
+
+
 }
